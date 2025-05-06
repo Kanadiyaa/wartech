@@ -67,7 +67,7 @@ if (isset($_POST['simpan'])) {
 
     
   <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Wartech</span>
       </a>
@@ -221,7 +221,7 @@ if (isset($_POST['simpan'])) {
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://instagram.com/abdzn_/">kanadiyaa</a>
+      Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
     </div>
   </footer><!-- End Footer -->
 

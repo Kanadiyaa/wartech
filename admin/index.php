@@ -44,7 +44,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Wartech</span>
       </a>
@@ -174,51 +174,45 @@
             <!-- End Welcome card -->
 
             
-            <!-- Sales Card -->
-            <div class="col-6">
-              <div class="card info-card sales-card">
-
-                <div class="card-body">
-                  <h5 class="card-title">Pesanan <span>| Semua Waktu</span></h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-basket"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>145</h6>
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
+            <section class="section dashboard">
+  <div class="row">
+    <!-- Sales Card -->
+    <div class="col-6">
+      <div class="card info-card sales-card">
+        <div class="card-body">
+          <h5 class="card-title">Pesanan <span>| Semua Waktu</span></h5>
+          <div class="d-flex align-items-center">
+            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+              <i class="bi bi-basket"></i>
             </div>
-            <!-- End Seles Card -->
-
-            <!-- Revenue Card -->
-            <div class="col-6">
-              <div class="card info-card revenue-card">
-
-                <div class="card-body">
-                  <h5 class="card-title">Pendapatan <span>| Hari ini</span></h5>
-
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-currency-dollar"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>Rp. 32.264</h6>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+            <div class="ps-3">
+              <h6>145</h6>
             </div>
-            <!-- End Revenue Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Sales Card -->
 
-
-
-
+    <!-- Revenue Card -->
+    <div class="col-6">
+      <div class="card info-card revenue-card">
+        <div class="card-body">
+          <h5 class="card-title">Pendapatan <span>| Hari ini</span></h5>
+          <div class="d-flex align-items-center">
+            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+              <i class="bi bi-currency-dollar"></i>
+            </div>
+            <div class="ps-3">
+              <h6>Rp. 32.264</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Revenue Card -->
+  </div> <!-- pastikan ini ada -->
+</section>
 
           </div>
         </div><!-- End Left side columns -->
@@ -245,7 +239,7 @@
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://instagram.com/abdzn_/">kanadiyaa</a>
+      Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
     </div>
   </footer><!-- End Footer -->
 

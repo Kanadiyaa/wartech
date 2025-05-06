@@ -117,7 +117,7 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="kategori.php">
       <i class="bi bi-person"></i>
-      <span>Kategori</span>
+      <span>Kategori Produk</span>
     </a>
   </li><!-- End Profile Page Nav -->
 
@@ -168,8 +168,8 @@
       <h1>Kategori Produk</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
-          <li class="breadcrumb-item">Kategori Produk</li>
+          <li class="breadcrumb-item"><a href="index.php">Beranda</a></li>
+          <li class="breadcrumb-item active">Kategori Produk</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -270,7 +270,7 @@
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://instagram.com/abdzn_/">kanadiyaa</a>
+      Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
     </div>
   </footer><!-- End Footer -->
 
