@@ -27,7 +27,7 @@ if (isset($_POST['simpan'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Kategori Produk - Wartech Admin</title>
+  <title>Kategori Produk - wartech Admin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -86,7 +86,7 @@ if (isset($_POST['simpan'])) {
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Salsabilla</h6>
+              <h6>kanadiyaa</h6>
               <span>Admin</span>
             </li>
             <li>
