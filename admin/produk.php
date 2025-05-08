@@ -188,9 +188,9 @@
                                         <th scope="col">Nama Produk</th>
                                         <th scope="col">Harga</th>
                                         <th scope="col">Stok</th>
-                                        <th scope="col">Nama Kategori</th>
+                                        <th scope="col">Deskripsi</th>
+                                        <th scope="col">Kategori</th>
                                         <th scope="col">Gambar</th>
-                                        <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -224,7 +224,7 @@
                                                 <td><?php echo $hasil['nm_kategori']; ?></td>
                                                 <td>
                                                     <?php if (!empty($hasil['gambar'])) { ?>
-                                                        <img src="produk.img/<?php echo $hasil['gambar']; ?>" width="100">
+                                                        <img src="produk_img/<?php echo $hasil['gambar']; ?>" width="100">
                                                     <?php } else { ?>
                                                         Tidak ada gambar
                                                     <?php } ?>

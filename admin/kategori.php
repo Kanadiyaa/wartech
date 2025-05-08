@@ -118,7 +118,7 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="kategori.php">
       <i class="bi bi-person"></i>
-      <span>Kategori Produk</span>
+      <span>Kategori produk</span>
     </a>
   </li><!-- End Profile Page Nav -->
 
