@@ -142,7 +142,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
             </li><!-- End Produk Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link" href="keranjang.php">
+                <a class="nav-link collapsed" href="keranjang.php">
                     <i class="bi bi-envelope"></i>
                     <span>Keranjang</span>
                 </a>
@@ -163,7 +163,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
             </li><!-- End Laporan Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pengguna.php">
+                <a class="nav-link" href="pengguna.php">
                     <i class="bi bi-dash-circle"></i>
                     <span>Pengguna</span>
                 </a>
@@ -199,7 +199,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
         <section class="section">
             <div class="row">
 
-                <div class="col-lg-6">
+                <div class="col-lg-12">
 
                     <div class="card">
                         <div class="card-body">
