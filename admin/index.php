@@ -4,17 +4,17 @@ include "koneksi.php";
 
 // Cek apakah sudah login
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
-    exit;
+  header("Location: login.php");
+  exit;
 }
 
 // Cek apakah status tersedia dan pastikan user adalah admin
 if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
-    echo "<script>
+  echo "<script>
     alert('Akses ditolak! Halaman ini hanya untuk Admin.');
     window.location.href='login.php';
     </script>";
-    exit;
+  exit;
 }
 ?>
 
@@ -96,7 +96,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
               <hr class="dropdown-divider">
             </li>
 
-           
+
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -194,53 +194,53 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                   <p class="text-muted small mb-0">Kelola produk, transaksi, dan pelanggan dengan mudah.</p>
                 </div>
               </div>
-            <!-- End Welcome card -->
+              <!-- End Welcome card -->
 
-            
-            <section class="section dashboard">
-  <div class="row">
-    <!-- Sales Card -->
-    <div class="col-6">
-      <div class="card info-card sales-card">
-        <div class="card-body">
-          <h5 class="card-title">Pesanan <span>| Semua Waktu</span></h5>
-          <div class="d-flex align-items-center">
-            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-              <i class="bi bi-basket"></i>
+
+              <section class="section dashboard">
+                <div class="row">
+                  <!-- Sales Card -->
+                  <div class="col-6">
+                    <div class="card info-card sales-card">
+                      <div class="card-body">
+                        <h5 class="card-title">Pesanan <span>| Semua Waktu</span></h5>
+                        <div class="d-flex align-items-center">
+                          <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-basket"></i>
+                          </div>
+                          <div class="ps-3">
+                            <h6>145</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Sales Card -->
+
+                  <!-- Revenue Card -->
+                  <div class="col-6">
+                    <div class="card info-card revenue-card">
+                      <div class="card-body">
+                        <h5 class="card-title">Pendapatan <span>| Hari ini</span></h5>
+                        <div class="d-flex align-items-center">
+                          <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="bi bi-currency-dollar"></i>
+                          </div>
+                          <div class="ps-3">
+                            <h6>Rp. 32.264</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Revenue Card -->
+                </div> <!-- pastikan ini ada -->
+              </section>
+
             </div>
-            <div class="ps-3">
-              <h6>145</h6>
-            </div>
-          </div>
+          </div><!-- End Left side columns -->
+
         </div>
-      </div>
-    </div>
-    <!-- End Sales Card -->
-
-    <!-- Revenue Card -->
-    <div class="col-6">
-      <div class="card info-card revenue-card">
-        <div class="card-body">
-          <h5 class="card-title">Pendapatan <span>| Hari ini</span></h5>
-          <div class="d-flex align-items-center">
-            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-              <i class="bi bi-currency-dollar"></i>
-            </div>
-            <div class="ps-3">
-              <h6>Rp. 32.264</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Revenue Card -->
-  </div> <!-- pastikan ini ada -->
-</section>
-
-          </div>
-        </div><!-- End Left side columns -->
-
-      </div>
     </section>
 
   </main><!-- End #main -->
@@ -255,7 +255,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
+      Designed by <a href="https://instagram.com/abdzn_/" target="_blank">kanadiyaa</a>
     </div>
   </footer><!-- End Footer -->
 

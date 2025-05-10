@@ -4,17 +4,17 @@ include "koneksi.php";
 
 // Cek apakah sudah login
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
-    exit;
+  header("Location: login.php");
+  exit;
 }
 
 // Cek apakah status tersedia dan pastikan user adalah admin
 if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
-    echo "<script>
+  echo "<script>
     alert('Akses ditolak! Halaman ini hanya untuk Admin.');
     window.location.href='login.php';
     </script>";
-    exit;
+  exit;
 }
 ?>
 
@@ -74,8 +74,8 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
 
     <div class="search-bar">
       <form class="search-form d-flex align-items-center" method="POST" action="">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword" 
-        value="<?php echo isset($_POST ['query']) ? htmlspecialchars($_P0ST['query']) : ''; ?>">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword"
+          value="<?php echo isset($_POST['query']) ? htmlspecialchars($_P0ST['query']) : ''; ?>">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button>
       </form>
     </div><!-- End Search Bar -->
@@ -103,7 +103,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
               <hr class="dropdown-divider">
             </li>
 
-           
+
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -128,61 +128,61 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
   </header><!-- End Header -->
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
-<ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-  <li class="nav-item">
-    <a class="nav-link collapsed " href="index.php">
-      <i class="bi bi-grid"></i>
-      <span>Beranda</span>
-    </a>
-  </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="index.php">
+          <i class="bi bi-grid"></i>
+          <span>Beranda</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link" href="kategori.php">
-      <i class="bi bi-person"></i>
-      <span>Kategori produk</span>
-    </a>
-  </li><!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link" href="kategori.php">
+          <i class="bi bi-person"></i>
+          <span>Kategori produk</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="produk.php">
-      <i class="bi bi-question-circle"></i>
-      <span>Produk</span>
-    </a>
-  </li><!-- End F.A.Q Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="produk.php">
+          <i class="bi bi-question-circle"></i>
+          <span>Produk</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="keranjang.php">
-      <i class="bi bi-envelope"></i>
-      <span>Keranjang</span>
-    </a>
-  </li><!-- End Contact Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="keranjang.php">
+          <i class="bi bi-envelope"></i>
+          <span>Keranjang</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="transaksi.php">
-      <i class="bi bi-card-list"></i>
-      <span>Transaksi</span>
-    </a>
-  </li><!-- End Register Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="transaksi.php">
+          <i class="bi bi-card-list"></i>
+          <span>Transaksi</span>
+        </a>
+      </li><!-- End Register Page Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="laporan.php">
-      <i class="bi bi-box-arrow-in-right"></i>
-      <span>Laporan</span>
-    </a>
-  </li><!-- End Login Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="laporan.php">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Laporan</span>
+        </a>
+      </li><!-- End Login Page Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="pengguna.php">
-      <i class="bi bi-dash-circle"></i>
-      <span>Pengguna</span>
-    </a>
-  </li><!-- End Error 404 Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pengguna.php">
+          <i class="bi bi-dash-circle"></i>
+          <span>Pengguna</span>
+        </a>
+      </li><!-- End Error 404 Page Nav -->
 
 
-</ul>
+    </ul>
 
-</aside><!-- End Sidebar-->
+  </aside><!-- End Sidebar-->
 
 
   <main id="main" class="main">
@@ -198,15 +198,15 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
     </div><!-- End Page Title -->
 
     <div class="row">
-        <div class="col-lg-12">
-          <div class="card">
-            <div class="card-body">
-                <a href="t_kategori.php" class="btn btn-primary mt-3">
-                  <i class="bi bi-plus-lg"></i> Tambah Data
-                </a>
-            </div>
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <a href="t_kategori.php" class="btn btn-primary mt-3">
+              <i class="bi bi-plus-lg"></i> Tambah Data
+            </a>
           </div>
         </div>
+      </div>
     </div>
 
     <section class="section">
@@ -225,44 +225,44 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                 </thead>
                 <tbody>
                   <?php
-                    include 'koneksi.php';
-                    $no = 1;
-                    // cek apakah ada pencarian
-                    $query = isset($_POST['query']) ? mysqli_real_escape_string($koneksi, $_POST['query']) : '';
-                    //query dasar
-                    $sql_query = "SELECT id_kategori, nm_kategori from tb_kategori";
-                    // jika ada pencarian, tambahkan kondisi WHERE
-                    if (!empty($query)) {
-                      $sql_query .= " WHERE nm_kategori LIKE '%$query%'";
-                    }
+                  include 'koneksi.php';
+                  $no = 1;
+                  // cek apakah ada pencarian
+                  $query = isset($_POST['query']) ? mysqli_real_escape_string($koneksi, $_POST['query']) : '';
+                  //query dasar
+                  $sql_query = "SELECT id_kategori, nm_kategori from tb_kategori";
+                  // jika ada pencarian, tambahkan kondisi WHERE
+                  if (!empty($query)) {
+                    $sql_query .= " WHERE nm_kategori LIKE '%$query%'";
+                  }
 
-                    $sql = mysqli_query($koneksi, $sql_query);
-                    if (mysqli_num_rows($sql) > 0) {
-                        while ($hasil = mysqli_fetch_array($sql)) {
-                    ?>
-                        <tr>
-                          <td><?php echo $no++; ?></td>
-                          <td><?php echo $hasil['nm_kategori']; ?></td>
-                          <td>
-                            <a href="e_kategori.php?id=<?php echo $hasil['id_kategori']; ?>" class="btn btn-warning">
-                              <i class="bi bi-pencil-square"></i>Edit
-                            </a>
-                            <a href="h_kategori.php?id=<?php echo $hasil['id_kategori']; ?>" class="btn btn-danger"
-                            onclick="return confirm('Yakin ingin menghapus data ini?')">
-                              <i class="bi bi-trash"></i>Hapus
-                            </a>
-                          </td>
-                        </tr>
-                      <?php 
-                      }
-                    } else {
-                      ?>
+                  $sql = mysqli_query($koneksi, $sql_query);
+                  if (mysqli_num_rows($sql) > 0) {
+                    while ($hasil = mysqli_fetch_array($sql)) {
+                  ?>
                       <tr>
-                        <td colspan="3" 
-                        class="text-center">Belum ada data</td>
+                        <td><?php echo $no++; ?></td>
+                        <td><?php echo $hasil['nm_kategori']; ?></td>
+                        <td>
+                          <a href="e_kategori.php?id=<?php echo $hasil['id_kategori']; ?>" class="btn btn-warning">
+                            <i class="bi bi-pencil-square"></i>Edit
+                          </a>
+                          <a href="h_kategori.php?id=<?php echo $hasil['id_kategori']; ?>" class="btn btn-danger"
+                            onclick="return confirm('Yakin ingin menghapus data ini?')">
+                            <i class="bi bi-trash"></i>Hapus
+                          </a>
+                        </td>
                       </tr>
-                      <?php
+                    <?php
                     }
+                  } else {
+                    ?>
+                    <tr>
+                      <td colspan="3"
+                        class="text-center">Belum ada data</td>
+                    </tr>
+                  <?php
+                  }
                   ?>
 
                 </tbody>
@@ -293,7 +293,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
+      Designed by <a href="https://instagram.com/abdzn_/" target="_blank">kanadiyaa</a>
     </div>
   </footer><!-- End Footer -->
 

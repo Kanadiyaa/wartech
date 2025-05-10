@@ -115,36 +115,36 @@ if (isset($_POST['simpan'])) {
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
-               <li class="nav-item dropdown pe-3">
+                <li class="nav-item dropdown pe-3">
 
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/gambarrr.jpg" alt="Profile" class="rounded-circle">
-          </a><!-- End Profile Iamge Icon -->
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="assets/img/gambarrr.jpg" alt="Profile" class="rounded-circle">
+                    </a><!-- End Profile Iamge Icon -->
 
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
-              <span>Admin</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
+                            <span>Admin</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
-           
-            <li>
-              <hr class="dropdown-divider">
-            </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="logout.php">
-                <i class="bi bi-box-arrow-in-right"></i>
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
 
             </ul>
         </nav><!-- End Icons Navigation -->
@@ -282,7 +282,7 @@ if (isset($_POST['simpan'])) {
             &copy; Copyright <strong><span>wartech</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
+            Designed by <a href="https://instagram.com/abdzn_/" target="_blank">kanadiyaa</a>
         </div>
     </footer><!-- End Footer -->
 

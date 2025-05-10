@@ -20,7 +20,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
 
 
 <?php
-include 'koneksi.php';  
+include 'koneksi.php';
 
 if (isset($_POST['simpan'])) {
     //ambil id terakhir dari tb_user
@@ -36,7 +36,7 @@ if (isset($_POST['simpan'])) {
 
     //ambil input dari from
     $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);//hashing password
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //hashing password
     $status = $_POST['status'];
 
     //query untuk insert data ke tb_user
@@ -110,29 +110,29 @@ if (isset($_POST['simpan'])) {
                         <!-- profile-img.jpg diganti nama file gambar kalian -->
                     </a><!-- End Profile Iamge Icon -->
 
-           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
-              <span>Admin</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
+                            <span>Admin</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
-           
-            <li>
-              <hr class="dropdown-divider">
-            </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="logout.php">
-                <i class="bi bi-box-arrow-in-right"></i>
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
-          </ul><!-- End Profile Dropdown Items -->
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
                 </li><!-- End Profile Nav -->
 
             </ul>
@@ -256,12 +256,12 @@ if (isset($_POST['simpan'])) {
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
+    <footer id="footer" class="footer">
         <div class="copyright">
             &copy; Copyright <strong><span>wartech</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
+            Designed by <a href="https://instagram.com/abdzn_/" target="_blank">kanadiyaa</a>
         </div>
     </footer><!-- End Footer -->
 

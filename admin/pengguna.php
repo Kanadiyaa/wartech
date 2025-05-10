@@ -87,29 +87,29 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                         <!-- profile-img.jpg diganti dengan foto kalian -->
                     </a><!-- End Profile Iamge Icon -->
 
-           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
-              <span>Admin</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
+                            <span>Admin</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
-           
-            <li>
-              <hr class="dropdown-divider">
-            </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="logout.php">
-                <i class="bi bi-box-arrow-in-right"></i>
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
 
-          </ul><!-- End Profile Dropdown Items -->
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
                 </li><!-- End Profile Nav -->
 
             </ul>
@@ -188,7 +188,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href= "t_pengguna.php" class="btn btn-primary mt-3">
+                        <a href="t_pengguna.php" class="btn btn-primary mt-3">
                             <i class="bi bi-plus-lg"></i> Tambah Data
                         </a>
                     </div>
@@ -248,14 +248,14 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                                                 <td><?php echo htmlspecialchars($hasil['status']); ?></td>
                                                 <td>
                                                     <a href="h_pengguna.php?id=<?php echo $hasil['id_user']; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">
-                                                        <i class="bi bi-trash"></i> 
+                                                        <i class="bi bi-trash"></i>
                                                     </a>
                                                 </td>
                                             </tr>
-                                    <?php
+                                        <?php
                                         }
                                     } else {
-                                    ?>
+                                        ?>
                                         <tr>
                                             <td colspan="4" class="text-center">Tidak ada data ditemukan</td>
                                         </tr>
@@ -280,7 +280,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
             &copy; Copyright <strong><span>wartech</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
+            Designed by <a href="https://instagram.com/abdzn_/" target="_blank">kanadiyaa</a>
         </div>
     </footer><!-- End Footer -->
 

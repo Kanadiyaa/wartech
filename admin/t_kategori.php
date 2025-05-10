@@ -4,17 +4,17 @@ include "koneksi.php";
 
 // Cek apakah sudah login
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
-    exit;
+  header("Location: login.php");
+  exit;
 }
 
 // Cek apakah status tersedia dan pastikan user adalah admin
 if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
-    echo "<script>
+  echo "<script>
     alert('Akses ditolak! Halaman ini hanya untuk Admin.');
     window.location.href='login.php';
     </script>";
-    exit;
+  exit;
 }
 ?>
 
@@ -87,8 +87,8 @@ if (isset($_POST['simpan'])) {
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
-    
-  <div class="d-flex align-items-center justify-content-between">
+
+    <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Wartech</span>
@@ -102,7 +102,7 @@ if (isset($_POST['simpan'])) {
 
         <li class="nav-item dropdown pe-3">
 
-        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/gambarrr.jpg" alt="Profile" class="rounded-circle">
           </a><!-- End Profile Iamge Icon -->
 
@@ -116,7 +116,7 @@ if (isset($_POST['simpan'])) {
               <hr class="dropdown-divider">
             </li>
 
-           
+
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -140,62 +140,62 @@ if (isset($_POST['simpan'])) {
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
-  <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-  <li class="nav-item">
-    <a class="nav-link " href="index.php">
-      <i class="bi bi-grid"></i>
-      <span>Beranda</span>
-    </a>
-  </li><!-- End Dashboard Nav -->
-
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="kategori.php">
-      <i class="bi bi-person"></i>
-      <span>Kategori produk</span>
-    </a>
-  </li><!-- End Profile Page Nav -->
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="produk.php">
-      <i class="bi bi-question-circle"></i>
-      <span>Produk</span>
-    </a>
-  </li><!-- End F.A.Q Page Nav -->
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="keranjang.php">
-      <i class="bi bi-envelope"></i>
-      <span>Keranjang</span>
-    </a>
-  </li><!-- End Contact Page Nav -->
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="transaksi.php">
-      <i class="bi bi-card-list"></i>
-      <span>Transaksi</span>
-    </a>
-  </li><!-- End Register Page Nav -->
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="laporan.php">
-      <i class="bi bi-box-arrow-in-right"></i>
-      <span>Laporan</span>
-    </a>
-  </li><!-- End Login Page Nav -->
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="pengguna.php">
-      <i class="bi bi-dash-circle"></i>
-      <span>Pengguna</span>
-    </a>
-  </li><!-- End Error 404 Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link " href="index.php">
+          <i class="bi bi-grid"></i>
+          <span>Beranda</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
 
 
-</ul>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="kategori.php">
+          <i class="bi bi-person"></i>
+          <span>Kategori produk</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
 
-</aside><!-- End Sidebar-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="produk.php">
+          <i class="bi bi-question-circle"></i>
+          <span>Produk</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="keranjang.php">
+          <i class="bi bi-envelope"></i>
+          <span>Keranjang</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="transaksi.php">
+          <i class="bi bi-card-list"></i>
+          <span>Transaksi</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="laporan.php">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Laporan</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pengguna.php">
+          <i class="bi bi-dash-circle"></i>
+          <span>Pengguna</span>
+        </a>
+      </li><!-- End Error 404 Page Nav -->
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
@@ -218,10 +218,10 @@ if (isset($_POST['simpan'])) {
               <form class="row g-3 mt-2" method="post">
                 <div class="col-12">
                   <label for="nm_kategori"
-                  class="form-label">Nama Kategori</label>
+                    class="form-label">Nama Kategori</label>
                   <input type="text" class="form-control"
-                  id="id_kategori" name="nm_kategori"
-                  placeholder="Masukkan Nama Kategori Produk">
+                    id="id_kategori" name="nm_kategori"
+                    placeholder="Masukkan Nama Kategori Produk">
                 </div>
                 <div class="text-center">
                   <button type="reset" class="btn btn-secondary">Reset</button>
@@ -246,7 +246,7 @@ if (isset($_POST['simpan'])) {
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://instagram.com/abdzn_/"target="_blank">kanadiyaa</a>
+      Designed by <a href="https://instagram.com/abdzn_/" target="_blank">kanadiyaa</a>
     </div>
   </footer><!-- End Footer -->
 
