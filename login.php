@@ -1,3 +1,34 @@
+<?php
+session_start();
+
+require 'admin/koneksi.php';
+
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $result = mysqli_query($koneksi, "SELECT * FROM tb_user WHERE username = '$username'");
+
+    // Cek apakah username ada
+    if (mysqli_num_rows($result) === 1) {
+        //cek password
+        $row = mysqli_fetch_assoc($result);
+        if (password_verify($password, $row['password'])) {
+            // Set session
+            $_SESSION['login'] = true;
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['id_user'] = $row['id_user'];
+            header("refresh:0 index.php");
+        } else {
+            echo "<script>alert('Username atau Password yang anda masukan salah');</script>";
+        }
+    } else {
+        echo "<script>alert('Username atau Password yang anda masukan salah');</script>";
+    }
+}
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="zxx">
     
@@ -440,61 +471,20 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
                             <!-- Login Form s-->
-                            <form action="#" >
+                            <form method="post" >
                                 <div class="login-form">
                                     <h4 class="login-title">Login</h4>
                                     <div class="row">
                                         <div class="col-md-12 col-12 mb-20">
-                                            <label>Email Address*</label>
-                                            <input class="mb-0" type="email" placeholder="Email Address">
+                                            <label>Username</label>
+                                            <input class="mb-0" type="text" placeholder="Masukan Username" name="username" required>
                                         </div>
                                         <div class="col-12 mb-20">
                                             <label>Password</label>
-                                            <input class="mb-0" type="password" placeholder="Password">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="check-box d-inline-block ml-0 ml-md-2 mt-10">
-                                                <input type="checkbox" id="remember_me">
-                                                <label for="remember_me">Remember me</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 mt-10 mb-20 text-left text-md-right">
-                                            <a href="#"> Forgotten pasward?</a>
+                                            <input class="mb-0" type="password" placeholder="Masukan Password" name="password" required>
                                         </div>
                                         <div class="col-md-12">
-                                            <button class="register-button mt-0">Login</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                            <form action="#">
-                                <div class="login-form">
-                                    <h4 class="login-title">Register</h4>
-                                    <div class="row">
-                                        <div class="col-md-6 col-12 mb-20">
-                                            <label>First Name</label>
-                                            <input class="mb-0" type="text" placeholder="First Name">
-                                        </div>
-                                        <div class="col-md-6 col-12 mb-20">
-                                            <label>Last Name</label>
-                                            <input class="mb-0" type="text" placeholder="Last Name">
-                                        </div>
-                                        <div class="col-md-12 mb-20">
-                                            <label>Email Address*</label>
-                                            <input class="mb-0" type="email" placeholder="Email Address">
-                                        </div>
-                                        <div class="col-md-6 mb-20">
-                                            <label>Password</label>
-                                            <input class="mb-0" type="password" placeholder="Password">
-                                        </div>
-                                        <div class="col-md-6 mb-20">
-                                            <label>Confirm Password</label>
-                                            <input class="mb-0" type="password" placeholder="Confirm Password">
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="register-button mt-0">Register</button>
+                                            <button class="register-button mt-0" type="submit" name="login">Login</button>
                                         </div>
                                     </div>
                                 </div>

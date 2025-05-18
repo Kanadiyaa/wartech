@@ -1,11 +1,19 @@
+<?php
+
+require 'admin/koneksi.php';
+require 'function.php';
+$sql = mysqli_query($koneksi, "SELECT * FROM tb_user");
+$data = mysqli_fetch_array($sql);
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
     
-<!-- contact32:04-->
+<!-- login-register31:27-->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Contact || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
+        <title>Login Register || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
@@ -34,16 +42,27 @@
         <link rel="stylesheet" href="css/magnific-popup.css">
         <!-- Bootstrap V4.1.3 Fremwork CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Main Style CSS -->
-        <link rel="stylesheet" href="style.css">
         <!-- Helper CSS -->
         <link rel="stylesheet" href="css/helper.css">
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="style.css">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="css/responsive.css">
         <!-- Modernizr js -->
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (registrasi($_POST)) {
+                echo "<script>alert('User baru berhasil ditambahkan!');";
+                echo "window.location.href = 'login.php';</script>";
+                exit;
+            } else {
+                echo "<script>alert('Registrasi Gagal!');</script>";
+            }
+        }
+        ?>
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -380,7 +399,7 @@
                                                     </li>
                                                     <li><a href="index.html">Other Pages</a>
                                                         <ul>
-                                                            <li><a href="login-register.html">My Account</a></li>
+                                                            <li class="active"><a href="login-register.html">My Account</a></li>
                                                             <li><a href="checkout.html">Checkout</a></li>
                                                             <li><a href="compare.html">Compare</a></li>
                                                             <li><a href="wishlist.html">Wishlist</a></li>
@@ -389,7 +408,7 @@
                                                     </li>
                                                     <li><a href="index.html">Other Pages 2</a>
                                                         <ul>
-                                                            <li class="active"><a href="contact.html">Contact</a></li>
+                                                            <li><a href="contact.html">Contact</a></li>
                                                             <li><a href="about-us.html">About Us</a></li>
                                                             <li><a href="faq.html">FAQ</a></li>
                                                             <li><a href="404.html">404 Error</a></li>
@@ -428,72 +447,47 @@
                     <div class="breadcrumb-content">
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li class="active">Contact</li>
+                            <li class="active">Login Register</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- Li's Breadcrumb Area End Here -->     
-            <!-- Begin Contact Main Page Area -->
-            <div class="contact-main-page mt-60 mb-40 mb-md-40 mb-sm-40 mb-xs-40">
-                <div class="container mb-60">
-                    <div id="google-map"></div>
-                </div>
+            <!-- Li's Breadcrumb Area End Here -->
+            <!-- Begin Login Content Area -->
+            <div class="page-section mb-60">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
-                            <div class="contact-page-side-content">
-                                <h3 class="contact-page-title">Contact Us</h3>
-                                <p class="contact-page-message mb-25">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum formas human.</p>
-                                <div class="single-contact-block">
-                                    <h4><i class="fa fa-fax"></i> Address</h4>
-                                    <p>123 Main Street, Anytown, CA 12345 – USA</p>
-                                </div>
-                                <div class="single-contact-block">
-                                    <h4><i class="fa fa-phone"></i> Phone</h4>
-                                    <p>Mobile: (08) 123 456 789</p>
-                                    <p>Hotline: 1009 678 456</p>
-                                </div>
-                                <div class="single-contact-block last-child">
-                                    <h4><i class="fa fa-envelope-o"></i> Email</h4>
-                                    <p>yourmail@domain.com</p>
-                                    <p>support@hastech.company</p>
-                                </div>
-                            </div>
+                        <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
+                            <!-- Login Form s-->
                         </div>
-                        <div class="col-lg-6 col-md-12 order-2 order-lg-1">
-                            <div class="contact-form-content pt-sm-55 pt-xs-55">
-                                <h3 class="contact-page-title">Tell Us Your Message</h3>
-                                <div class="contact-form">
-                                    <form  id="contact-form" action="http://demo.hasthemes.com/limupa-v3/limupa/mail.php" method="post">
-                                        <div class="form-group">
-                                            <label>Your Name <span class="required">*</span></label>
-                                            <input type="text" name="customerName" id="customername" required>
+                        <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
+                            <form method="post">
+                                <div class="login-form">
+                                    <h4 class="login-title">Register</h4>
+                                    <div class="row">
+                                        <div class="col-md-6 col-12 mb-20">
+                                            <label>Username</label>
+                                            <input class="mb-0" type="text" placeholder="Masukan Username" name="username">
                                         </div>
-                                        <div class="form-group">
-                                            <label>Your Email <span class="required">*</span></label>
-                                            <input type="email" name="customerEmail" id="customerEmail" required>
+                                        <div class="col-md-6 mb-20">
+                                            <label>Password</label>
+                                            <input class="mb-0" type="password" placeholder="Masukan Password" name="password">
                                         </div>
-                                        <div class="form-group">
-                                            <label>Subject</label>
-                                            <input type="text" name="contactSubject" id="contactSubject">
+                                        <div class="col-md-6 mb-20">
+                                            <label>Konfirmasi Password</label>
+                                            <input class="mb-0" type="password" placeholder="Masukan Konfirmasi Password" name="password2">
                                         </div>
-                                        <div class="form-group mb-30">
-                                            <label>Your Message</label>
-                                            <textarea name="contactMessage" id="contactMessage" ></textarea>
+                                        <div class="col-12">
+                                            <button class="register-button mt-0" type="submit" name="register">Register</button>
                                         </div>
-                                        <div class="form-group">
-                                            <button type="submit" value="submit" id="submit" class="li-btn-3" name="submit">send</button>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
-                                <p class="form-messege"></p>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Contact Main Page Area End Here -->
+            <!-- Login Content Area End Here -->
             <!-- Begin Footer Area -->
             <div class="footer">
                 <!-- Begin Footer Static Top Area -->
@@ -765,202 +759,7 @@
         <script src="js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="js/main.js"></script>
-            <!-- Google Map -->
-            <script src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyChs2QWiAhnzz0a4OEhzqCXwx_qA9ST_lE"></script>
-            
-            <script>
-                // When the window has finished loading create our google map below
-                google.maps.event.addDomListener(window, 'load', init);
-                function init() {
-                    // Basic options for a simple Google Map
-                    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                    var mapOptions = {
-                        // How zoomed in you want the map to start at (always required)
-                        zoom: 12,
-                        scrollwheel: false,
-                        // The latitude and longitude to center the map (always required)
-                        center: new google.maps.LatLng(40.740610, -73.935242), // New York
-                        // How you would like to style the map. 
-                        // This is where you would paste any style found on
-                        styles: [{
-                                "featureType": "water",
-                                "elementType": "geometry",
-                                "stylers": [{
-                                        "color": "#e9e9e9"
-                                    },
-                                    {
-                                        "lightness": 17
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "landscape",
-                                "elementType": "geometry",
-                                "stylers": [{
-                                        "color": "#f5f5f5"
-                                    },
-                                    {
-                                        "lightness": 20
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.highway",
-                                "elementType": "geometry.fill",
-                                "stylers": [{
-                                        "color": "#ffffff"
-                                    },
-                                    {
-                                        "lightness": 17
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.highway",
-                                "elementType": "geometry.stroke",
-                                "stylers": [{
-                                        "color": "#ffffff"
-                                    },
-                                    {
-                                        "lightness": 29
-                                    },
-                                    {
-                                        "weight": 0.2
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.arterial",
-                                "elementType": "geometry",
-                                "stylers": [{
-                                        "color": "#ffffff"
-                                    },
-                                    {
-                                        "lightness": 18
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.local",
-                                "elementType": "geometry",
-                                "stylers": [{
-                                        "color": "#ffffff"
-                                    },
-                                    {
-                                        "lightness": 16
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "poi",
-                                "elementType": "geometry",
-                                "stylers": [{
-                                        "color": "#f5f5f5"
-                                    },
-                                    {
-                                        "lightness": 21
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "poi.park",
-                                "elementType": "geometry",
-                                "stylers": [{
-                                        "color": "#dedede"
-                                    },
-                                    {
-                                        "lightness": 21
-                                    }
-                                ]
-                            },
-                            {
-                                "elementType": "labels.text.stroke",
-                                "stylers": [{
-                                        "visibility": "on"
-                                    },
-                                    {
-                                        "color": "#ffffff"
-                                    },
-                                    {
-                                        "lightness": 16
-                                    }
-                                ]
-                            },
-                            {
-                                "elementType": "labels.text.fill",
-                                "stylers": [{
-                                        "saturation": 36
-                                    },
-                                    {
-                                        "color": "#333333"
-                                    },
-                                    {
-                                        "lightness": 40
-                                    }
-                                ]
-                            },
-                            {
-                                "elementType": "labels.icon",
-                                "stylers": [{
-                                    "visibility": "off"
-                                }]
-                            },
-                            {
-                                "featureType": "transit",
-                                "elementType": "geometry",
-                                "stylers": [{
-                                        "color": "#f2f2f2"
-                                    },
-                                    {
-                                        "lightness": 19
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "administrative",
-                                "elementType": "geometry.fill",
-                                "stylers": [{
-                                        "color": "#fefefe"
-                                    },
-                                    {
-                                        "lightness": 20
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "administrative",
-                                "elementType": "geometry.stroke",
-                                "stylers": [{
-                                        "color": "#fefefe"
-                                    },
-                                    {
-                                        "lightness": 17
-                                    },
-                                    {
-                                        "weight": 1.2
-                                    }
-                                ]
-                            }
-                        ]
-                    };
-
-                    // Get the HTML DOM element that will contain your map 
-                    // We are using a div with id="map" seen below in the <body>
-                    var mapElement = document.getElementById('google-map');
-
-                    // Create the Google Map using our element and options defined above
-                    var map = new google.maps.Map(mapElement, mapOptions);
-
-                    // Let's also add a marker while we're at it
-                    var marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(40.740610, -73.935242),
-                        map: map,
-                        title: 'Limupa',
-                        animation: google.maps.Animation.BOUNCE
-                    });
-                }
-            </script>
     </body>
 
-<!-- contact32:04-->
+<!-- login-register31:27-->
 </html>
