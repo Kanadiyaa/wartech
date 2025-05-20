@@ -9,7 +9,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Shop List || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
+    <title>Belanja || Wartech - Toko Produk Elektronik</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -237,8 +237,8 @@ session_start();
             <div class="container">
                 <div class="breadcrumb-content">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Shop List</li>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li class="active">Belanja</li>
                     </ul>
                 </div>
             </div>

@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login Register || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
+    <title>Login || Wartech - Toko Produk Elektronik</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -151,8 +151,7 @@ if (isset($_POST['login'])) {
             <div class="container">
                 <div class="breadcrumb-content">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Login Register</li>
+                        <li class="active">Login</li>
                     </ul>
                 </div>
             </div>
