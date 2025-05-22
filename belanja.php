@@ -769,7 +769,7 @@ session_start();
                                 <div class="product-details-view-content pt-60">
                                     <div class="product-info">
                                         <h2 id="modal-nama-produk"></h2>
-                                        <span class="product-details-ref" id="modal-produk">kategori</span>
+                                        <span class="product-details-ref" id="modal-kategori">kategori</span>
                                         <div class="price-box pt-20">
                                             <span class="new-price new-price-2" id="modal-harga">Rp0</span>
                                         </div>
@@ -821,8 +821,8 @@ session_start();
 
         <script>
             $(document).ready(function() {
-                $('.quick-view-btn').on('click', function() {
-                    var id_produk = $(this).data('id');
+                $('.quick-view').on('click', function() {
+                    var id = $(this).data('id');
 
                     $.ajax({
                         url: 'get_produk.php',
@@ -844,7 +844,7 @@ session_start();
                             $('#input-harga').val(data.harga);
 
                             //reset jumlah
-                            $('input-jumlah').val(1);
+                            $('#input-jumlah').val(1);
 
                             //tampilkan model
                             $('#exampleModalCenter').modal('show');
