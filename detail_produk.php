@@ -491,8 +491,6 @@ session_start();
                                         </div>
                                     </div>
                                 <?php } ?>
-
-
                                 <!-- single-product-wrap end -->
                             </div>
                         </div>
