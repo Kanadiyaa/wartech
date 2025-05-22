@@ -225,6 +225,46 @@ session_start();
                     <div class="col-12">
                         <?php
                         include "admin/koneksi.php";
+
+                        if (isset($_POST['update_cart'])) {
+    if (!isset($_SESSION['id_user'])) {
+        echo "<script>alert('User tidak ditemukan!'); window.location='cart.php';</script>";
+        exit;
+    }
+
+    $id_user = $_SESSION['id_user'];
+    
+    // Pastikan data qty tersedia
+    if (isset($_POST['qty']) && is_array($_POST['qty'])) {
+        foreach ($_POST['qty'] as $id_pesanan => $qty) {
+            $qty = (int)$qty;
+            if ($qty < 1) $qty = 1;
+
+            // Ambil harga produk terkait dari join tabel
+            $query = mysqli_query($koneksi, "
+                SELECT pr.harga 
+                FROM tb_pesanan p 
+                JOIN tb_produk pr ON p.id_produk = pr.id_produk 
+                WHERE p.id_pesanan = '$id_pesanan' AND p.id_user = '$id_user'
+            ");
+            $data = mysqli_fetch_assoc($query);
+            $harga = $data['harga'];
+            $total = $qty * $harga;
+
+            // Update qty dan total
+            mysqli_query($koneksi, "
+                UPDATE tb_pesanan 
+                SET qty = '$qty', total = '$total' 
+                WHERE id_pesanan = '$id_pesanan' AND id_user = '$id_user'
+            ");
+        }
+    }
+
+    echo "<script>alert('Keranjang berhasil diperbarui.'); window.location='cart.php';</script>";
+    exit;
+}
+
+
                         if (isset($_POST['checkout'])) {
                             if (!isset($_SESSION['id_user'])) {
                                 echo "<script>alert('User tidak ditemukan'); window.location= 'cart.php';</script>";
@@ -328,7 +368,7 @@ session_start();
                                                 <td class='quantity'>
                                                 <label>Quantity</label>
                                                     <div class='cart-plus-minus'>
-                                                        <input class='cart-plus-minus-box' value='{$row['qty']}' type='text' readonly>
+                                                        <input name='qty[{$row['id_pesanan']}]' class='cart-plus-minus-box' value='{$row['qty']}' type='number' min='1'>
                                                         <div class='dec qtybutton'><i class='fa fa-angle-down'></i></div>
                                                         <div class='inc qtybutton'><i class='fa fa-angle-up'></i></div>
                                                     </div>
