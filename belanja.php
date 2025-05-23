@@ -775,11 +775,11 @@ session_start();
                                         </div>
                                         <div class="product-decs">
                                             <p id="modal-desk"></p>
-                                            <p><strong>Stok tersedia:</strong> <span id="modal-stok">0</span>unit</p>
+                                            <p><strong>Stok tersedia:</strong> <span id="modal-stok">0</span> unit</p>
                                         </div>
 
                                         <div class="single-add-to-cart">
-                                            <from action="tambah_ke_keranjang.php" method="post" class="cart-quantity">
+                                            <form action="tambah_ke_keranjang.php" method="POST" class="cart-quantity">
                                                 <input type="hidden" name="id_produk" id="input-id-produk">
                                                 <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
                                                 <input type="hidden" name="harga" id="input-harga">
@@ -795,16 +795,16 @@ session_start();
                                                 </div>
 
                                                 <button class="add-to-cart" type="submit">Beli Sekarang</button>
-                                                </form>
+                                            </form>
                                         </div>
+
                                         <div class="product-additional-info pt-25">
-                                            <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
                                             <div class="product-social-sharing pt-25">
                                                 <ul>
-                                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
-                                                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i> Google +</a></li>
+                                                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -816,7 +816,8 @@ session_start();
                 </div>
             </div>
         </div>
-        
+
+
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <script>

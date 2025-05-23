@@ -279,7 +279,7 @@ session_start();
                                             <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
                                         </div>
                                     </div>
-                                    <button class="add-to-cart" type="submit">Beli Sekarang</button>
+                                    <button class="add-to-cart" type="submit">Tambah Ke Keranjang</button>
                                 </form>
 
                                 <div class="product-additional-info pt-25">
@@ -433,7 +433,7 @@ session_start();
         <section class="product-area li-laptop-product pt-30 pb-50">
             <div class="container">
                 <div class="row">
-                    <!-- Begin Li's Section Area -->
+                <!-- Begin Li's Section Area -->
                     <div class="col-lg-12">
                         <div class="li-section-title">
                             <h2>
