@@ -118,63 +118,60 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
+<aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link " href="index.php">
-          <i class="bi bi-grid"></i>
-          <span>Beranda</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">
+                    <i class="bi bi-grid"></i>
+                    <span>Beranda</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="kategori.php">
+                    <i class="bi bi-airplane"></i>
+                    <span>Kategori</span>
+                </a>
+            </li><!-- End Kategori Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="kategori.php">
-          <i class="bi bi-person"></i>
-          <span>Kategori produk</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="produk.php">
+                    <i class="bi bi-question-circle"></i>
+                    <span>Produk</span>
+                </a>
+            </li><!-- End Produk Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="produk.php">
-          <i class="bi bi-question-circle"></i>
-          <span>Produk</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="keranjang.php">
+                    <i class="bi bi-envelope"></i>
+                    <span>Keranjang</span>
+                </a>
+            </li><!-- End Keranjang Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="keranjang.php">
-          <i class="bi bi-envelope"></i>
-          <span>Keranjang</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="transaksi.php">
+                    <i class="bi bi-card-list"></i>
+                    <span>Transaksi</span>
+                </a>
+            </li><!-- End Transaksi Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="transaksi.php">
-          <i class="bi bi-card-list"></i>
-          <span>Transaksi</span>
-        </a>
-      </li><!-- End Register Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="laporan.php">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    <span>Laporan</span>
+                </a>
+            </li><!-- End Laporan Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="laporan.php">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Laporan</span>
-        </a>
-      </li><!-- End Login Page Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pengguna.php">
+                    <i class="bi bi-dash-circle"></i>
+                    <span>Pengguna</span>
+                </a>
+            </li><!-- End pengguna Page Nav -->
+        </ul>
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pengguna.php">
-          <i class="bi bi-dash-circle"></i>
-          <span>Pengguna</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
-
-
-    </ul>
-
-  </aside><!-- End Sidebar-->
+    </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
