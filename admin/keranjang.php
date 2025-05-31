@@ -193,14 +193,14 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                         ?>
 
                         <div class="filter-bar mt-3">
-                            <from class="filter-from d-flex align-items-center" method="GET" action="">
-                                <select name="kategori" class="from-select me-2" style="max-width: 200px;" title="Pilih kategori">
+                            <form class="filter-form d-flex align-items-center" method="GET" action="">
+                                <select name="kategori" class="form-select me-2" style="max-width: 200px;" title="Pilih kategori">
                                     <option value="">-- Semua Kategori --</option>
                                     <?php
-                                    if ($result_kategori->num_row > 0) {
-                                        while ($row = $result_kategori->fecth_assoc()) {
-                                            $selected = ($filter_kategori == $row['id_kategori']) ? "selected" : "";
-                                            echo "<option value'" . $row['id_kategori'] . "'$selected>", htmlspecialchars($row['nm_kategori']) . "</option>";
+                                    if ($result_kategori->num_rows > 0) {
+                                        while ($row = $result_kategori->fetch_assoc()) {
+                                            $selected = ($kategori_filter == $row['id_kategori']) ? "selected" : "";
+                                            echo "<option value='" . $row['id_kategori'] . "' $selected>" . htmlspecialchars($row['nm_kategori']) . "</option>";
                                         }
                                     }
                                     ?>
@@ -208,7 +208,6 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
                                 <button type="submit" class="btn btn-primary ms-2">Filter</button>
                             </from>
                         </div>
-
 
                     </div>
                 </div>
@@ -235,7 +234,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
 
                             // Tambah filter kategori jika dipilih
                             if (!empty($filter_kategori)) {
-                                $sql .= "WHERE k.id_kategori = '$filter_kategori'";
+                                $sql .= " WHERE k.id_kategori = '$filter_kategori'";
                             }
                             $result = $koneksi->query($sql);
                             ?>
