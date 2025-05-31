@@ -22,9 +22,9 @@ $id_kategori = mysqli_real_escape_string($koneksi, $id_kategori);
 
 // Query data
 $data = query("SELECT tb_produk.id_produk, tb_produk.nm_produk, tb_produk.harga, tb_produk.stok, tb_produk.desk, tb_produk.gambar, tb_kategori.nm_kategori
-               FROM tb_produk
-               JOIN tb_kategori ON tb_produk.id_kategori = tb_kategori.id_kategori
-               WHERE tb_produk.id_kategori = '$id_kategori'");
+            FROM tb_produk
+            JOIN tb_kategori ON tb_produk.id_kategori = tb_kategori.id_kategori
+            WHERE tb_produk.id_kategori = '$id_kategori'");
 
 if (empty($data)) {
     die("Tidak ada data yang ditemukan untuk kategori ini.");
