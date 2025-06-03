@@ -73,7 +73,7 @@ $html = '<html>
 </head>
 <body>
 
-<h1 align="center">Wartceh</h1>
+<h1 align="center">wartceh</h1>
 <hr>
 <h1 align="center">LAPORAN PRODUK BERDASARKAN KATEGORI</h1>
 

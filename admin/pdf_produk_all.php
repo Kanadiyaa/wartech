@@ -65,7 +65,7 @@ $html = '<html>
 </head>
 <body>
 
-<h1 align="center">Wartech</h1>
+<h1 align="center">wartech</h1>
 <hr>
 <h1 align="center">LAPORAN DATA PRODUK</h1>
 
