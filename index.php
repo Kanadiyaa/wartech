@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -61,161 +64,110 @@
                         <div class="col-lg-3">
                             <div class="logo pb-sm-30 pb-xs-30">
                                 <a href="index.html">
-                                    <img src="images/menu/logo/1.jpg" alt="">
+                                    <h1>Wartech</h1>
                                 </a>
                             </div>
                         </div>
                         <!-- Header Logo Area End Here -->
                         <!-- Begin Header Middle Right Area -->
                         <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
-                            <!-- Begin Header Middle Searchbox Area -->
-                            <form action="#" class="hm-searchbox">
-                                <select class="nice-select select-search-category">
-                                    <option value="0">All</option>
-                                    <option value="10">Laptops</option>
-                                    <option value="17">- - Prime Video</option>
-                                    <option value="20">- - - - All Videos</option>
-                                    <option value="21">- - - - Blouses</option>
-                                    <option value="22">- - - - Evening Dresses</option>
-                                    <option value="23">- - - - Summer Dresses</option>
-                                    <option value="24">- - - - T-shirts</option>
-                                    <option value="25">- - - - Rent or Buy</option>
-                                    <option value="26">- - - - Your Watchlist</option>
-                                    <option value="27">- - - - Watch Anywhere</option>
-                                    <option value="28">- - - - Getting Started</option>
-                                    <option value="18">- - - - Computers</option>
-                                    <option value="29">- - - - More to Explore</option>
-                                    <option value="30">- - - - TV &amp; Video</option>
-                                    <option value="31">- - - - Audio &amp; Theater</option>
-                                    <option value="32">- - - - Camera, Photo </option>
-                                    <option value="33">- - - - Cell Phones</option>
-                                    <option value="34">- - - - Headphones</option>
-                                    <option value="35">- - - - Video Games</option>
-                                    <option value="36">- - - - Wireless Speakers</option>
-                                    <option value="19">- - - - Electronics</option>
-                                    <option value="37">- - - - Amazon Home</option>
-                                    <option value="38">- - - - Kitchen &amp; Dining</option>
-                                    <option value="39">- - - - Furniture</option>
-                                    <option value="40">- - - - Bed &amp; Bath</option>
-                                    <option value="41">- - - - Appliances</option>
-                                    <option value="11">TV &amp; Audio</option>
-                                    <option value="42">- - Chamcham</option>
-                                    <option value="45">- - - - Office</option>
-                                    <option value="47">- - - - Gaming</option>
-                                    <option value="48">- - - - Chromebook</option>
-                                    <option value="49">- - - - Refurbished</option>
-                                    <option value="50">- - - - Touchscreen</option>
-                                    <option value="51">- - - - Ultrabooks</option>
-                                    <option value="52">- - - - Blouses</option>
-                                    <option value="43">- - Sanai</option>
-                                    <option value="53">- - - - Hard Drives</option>
-                                    <option value="54">- - - - Graphic Cards</option>
-                                    <option value="55">- - - - Processors (CPU)</option>
-                                    <option value="56">- - - - Memory</option>
-                                    <option value="57">- - - - Motherboards</option>
-                                    <option value="58">- - - - Fans &amp; Cooling</option>
-                                    <option value="59">- - - - CD/DVD Drives</option>
-                                    <option value="44">- - Meito</option>
-                                    <option value="60">- - - - Sound Cards</option>
-                                    <option value="61">- - - - Cases &amp; Towers</option>
-                                    <option value="62">- - - - Casual Dresses</option>
-                                    <option value="63">- - - - Evening Dresses</option>
-                                    <option value="64">- - - - T-shirts</option>
-                                    <option value="65">- - - - Tops</option>
-                                    <option value="12">Smartphone</option>
-                                    <option value="66">- - Camera Accessories</option>
-                                    <option value="68">- - - - Octa Core</option>
-                                    <option value="69">- - - - Quad Core</option>
-                                    <option value="70">- - - - Dual Core</option>
-                                    <option value="71">- - - - 7.0 Screen</option>
-                                    <option value="72">- - - - 9.0 Screen</option>
-                                    <option value="73">- - - - Bags &amp; Cases</option>
-                                    <option value="67">- - XailStation</option>
-                                    <option value="74">- - - - Batteries</option>
-                                    <option value="75">- - - - Microphones</option>
-                                    <option value="76">- - - - Stabilizers</option>
-                                    <option value="77">- - - - Video Tapes</option>
-                                    <option value="78">- - - - Memory Card Readers</option>
-                                    <option value="79">- - - - Tripods</option>
-                                    <option value="13">Cameras</option>
-                                    <option value="14">headphone</option>
-                                    <option value="15">Smartwatch</option>
-                                    <option value="16">Accessories</option>
-                                </select>
-                                <input type="text" placeholder="Enter your search key ...">
-                                <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                            <!-- Header Middle Searchbox Area End Here -->
                             <!-- Begin Header Middle Right Area -->
                             <div class="header-middle-right">
                                 <ul class="hm-menu">
-                                    <!-- Begin Header Middle Wishlist Area -->
-                                    <li class="hm-wishlist">
-                                        <a href="login-register.php">
-                                            <span class="cart-item-count wishlist-item-count">0</span>
-                                            <i class="fa fa-user-o"></i>
-                                        </a>
-                                    </li>
-                                    <!-- Header Middle Wishlist Area End Here -->
-                                    <!-- Begin Header Mini Cart Area -->
-                                    <li class="hm-minicart">
-                                        <div class="hm-minicart-trigger">
-                                            <span class="item-icon"></span>
-                                            <span class="item-text">£80.00
-                                                <span class="cart-item-count">2</span>
-                                            </span>
-                                        </div>
-                                        <span></span>
-                                        <div class="minicart">
-                                            <ul class="minicart-product-list">
-                                                <li>
-                                                    <a href="single-product.html" class="minicart-product-image">
-                                                        <img src="images/product/small-size/5.jpg" alt="cart products">
-                                                    </a>
-                                                    <div class="minicart-product-details">
-                                                        <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                        <span>£40 x 1</span>
-                                                    </div>
-                                                    <button class="close" title="Remove">
-                                                        <i class="fa fa-close"></i>
-                                                    </button>
+                                    <?php
+
+                                    if (!isset($_SESSION['id_user'])) {
+                                    ?>
+                                        <!-- Begin Header Middle Wishlist Area -->
+                                        <li class="hm-wishlist">
+                                            <a href="login.php" title="Login">
+                                                <i class="fa fa-user-o"></i>
+                                            </a>
+                                        </li>
+                                    <?php
+                                    } else {
+                                        // Ambil nama user dari session atau database jika mau
+                                        $nama_user = $_SESSION['username']; // pastikan diset saat login
+
+                                    ?>
+                                        <!-- User Icon with Dropdown -->
+                                        <li class="hm-wishlist dropdown">
+                                            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-user"></i>
+                                            </a>
+                                            <ul class="dropdown-menu" style="padding: 10px; min-width: 150px; text-align: center;">
+                                                <li style="padding: 5px 10px; font-weight: bold;">
+                                                    <?= htmlspecialchars($nama_user) ?>
                                                 </li>
                                                 <li>
-                                                    <a href="single-product.html" class="minicart-product-image">
-                                                        <img src="images/product/small-size/6.jpg" alt="cart products">
+                                                    <hr style="margin: 5px 0;">
+                                                </li> <!-- Garis pembatas -->
+                                                <li>
+                                                    <a href="logout.php" style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+                                                        <i class="fa fa-sign-out"></i> Logout
                                                     </a>
-                                                    <div class="minicart-product-details">
-                                                        <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                        <span>£40 x 1</span>
-                                                    </div>
-                                                    <button class="close" title="Remove">
-                                                        <i class="fa fa-close"></i>
-                                                    </button>
                                                 </li>
                                             </ul>
-                                            <p class="minicart-total">SUBTOTAL: <span>£80.00</span></p>
-                                            <div class="minicart-button">
-                                                <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-dark">
-                                                    <span>View Full Cart</span>
-                                                </a>
-                                                <a href="checkout.html" class="li-button li-button-fullwidth">
-                                                    <span>Checkout</span>
-                                                </a>
+                                        </li>
+
+                                        <!-- Header Middle Wishlist Area End Here -->
+                                        <!-- Begin Header Mini Cart Area -->
+                                        <li class="hm-minicart">
+                                            <div class="hm-minicart-trigger">
+                                                <span class="item-icon"></span>
+                                                <span class="item-text">£80.00
+                                                    <span class="cart-item-count">2</span>
+                                                </span>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <!-- Header Mini Cart Area End Here -->
+                                            <span></span>
+                                            <div class="minicart">
+                                                <ul class="minicart-product-list">
+                                                    <li>
+                                                        <a href="single-product.html" class="minicart-product-image">
+                                                            <img src="images/product/small-size/5.jpg" alt="cart products">
+                                                        </a>
+                                                        <div class="minicart-product-details">
+                                                            <h6><a href="single-product.html">Aenean eu tristique</a></h6>
+                                                            <span>£40 x 1</span>
+                                                        </div>
+                                                        <button class="close" title="Remove">
+                                                            <i class="fa fa-close"></i>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <a href="single-product.html" class="minicart-product-image">
+                                                            <img src="images/product/small-size/6.jpg" alt="cart products">
+                                                        </a>
+                                                        <div class="minicart-product-details">
+                                                            <h6><a href="single-product.html">Aenean eu tristique</a></h6>
+                                                            <span>£40 x 1</span>
+                                                        </div>
+                                                        <button class="close" title="Remove">
+                                                            <i class="fa fa-close"></i>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                                <p class="minicart-total">SUBTOTAL: <span>£80.00</span></p>
+                                                <div class="minicart-button">
+                                                    <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-dark">
+                                                        <span>View Full Cart</span>
+                                                    </a>
+                                                    <a href="checkout.html" class="li-button li-button-fullwidth">
+                                                        <span>Checkout</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
-                            <!-- Header Middle Right Area End Here -->
                         </div>
-                        <!-- Header Middle Right Area End Here -->
                     </div>
                 </div>
             </div>
             <!-- Header Middle Area End Here -->
             <!-- Begin Header Bottom Area -->
-            <div class="header-bottom header-sticky d-none d-lg-block d-xl-block">
+            <div class="header-bottom mb-0 header-sticky stick d-none d-lg-block d-xl-block">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -250,6 +202,17 @@
             <!-- Mobile Menu Area End Here -->
         </header>
         <!-- Header Area End Here -->
+        <!-- Begin Li's Breadcrumb Area -->
+        <div class="breadcrumb-area">
+            <div class="container">
+                <div class="breadcrumb-content">
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Li's Breadcrumb Area End Here -->
         <!-- Begin Slider With Banner Area -->
         <div class="slider-with-banner">
             <div class="container">
@@ -2819,8 +2782,9 @@
                                         <img src="images/shipping-icon/1.png" alt="Shipping Icon">
                                     </div>
                                     <div class="shipping-text">
-                                        <h2>Free Delivery</h2>
-                                        <p>And free returns. See checkout for delivery dates.</p>
+                                        <h2>Pengiriman Gratis</h2>
+                                        <p>
+                                            Untuk semua pesanan di atas Rp 500.000>
                                     </div>
                                 </div>
                             </div>
@@ -2832,8 +2796,8 @@
                                         <img src="images/shipping-icon/2.png" alt="Shipping Icon">
                                     </div>
                                     <div class="shipping-text">
-                                        <h2>Safe Payment</h2>
-                                        <p>Pay with the world's most popular and secure payment methods.</p>
+                                        <h2>Pembayaran Aman</h2>
+                                        <p>Bayar dengan metode pembayaran paling populer dan aman di dunia.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2845,8 +2809,8 @@
                                         <img src="images/shipping-icon/3.png" alt="Shipping Icon">
                                     </div>
                                     <div class="shipping-text">
-                                        <h2>Shop with Confidence</h2>
-                                        <p>Our Buyer Protection covers your purchasefrom click to delivery.</p>
+                                        <h2>Belanja dengan percaya diri</h2>
+                                        <p>Perlindungan pembeli kami melindungi pembelian anda dari klik hinggan pengiriman.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2858,8 +2822,8 @@
                                         <img src="images/shipping-icon/4.png" alt="Shipping Icon">
                                     </div>
                                     <div class="shipping-text">
-                                        <h2>24/7 Help Center</h2>
-                                        <p>Have a question? Call a Specialist or chat online.</p>
+                                        <h2>Pusat Bantuan 24/7</h2>
+                                        <p>Hubung kami jika anda mengalami kendala.</p>
                                     </div>
                                 </div>
                             </div>
@@ -2878,103 +2842,47 @@
                             <!-- Begin Footer Logo Area -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="footer-logo">
-                                    <img src="images/menu/logo/1.jpg" alt="Footer Logo">
+                                    <h1>Wartech</h1>
                                     <p class="info">
-                                        We are a team of designers and developers that create high quality HTML Template & Woocommerce, Shopify Theme.
+                                        Selamat data di toko kami Wartech, toko kami menyediakan berbagai macam barang elektronik. Selamat Berbelanja.
                                     </p>
                                 </div>
                                 <ul class="des">
                                     <li>
-                                        <span>Address: </span>
-                                        6688Princess Road, London, Greater London BAS 23JK, UK
+                                        <span>Alamat: </span>
+                                        Jl.Randublatung Lorong 4, RT 3, RW 1, Tambakromo, Cepu
                                     </li>
                                     <li>
                                         <span>Phone: </span>
-                                        <a href="#">(+123) 123 321 345</a>
+                                        <a href="#">(+62) 877 2890 8035</a>
                                     </li>
                                     <li>
                                         <span>Email: </span>
-                                        <a href="mailto://info@yourdomain.com">info@yourdomain.com</a>
+                                        <a href="mailto://kabdzn.@gmail.com">kabdzn.@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>
                             <!-- Footer Logo Area End Here -->
                             <!-- Begin Footer Block Area -->
                             <div class="col-lg-2 col-md-3 col-sm-6">
-                                <div class="footer-block">
-                                    <h3 class="footer-block-title">Product</h3>
-                                    <ul>
-                                        <li><a href="#">Prices drop</a></li>
-                                        <li><a href="#">New products</a></li>
-                                        <li><a href="#">Best sales</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- Footer Block Area End Here -->
                             <!-- Begin Footer Block Area -->
                             <div class="col-lg-2 col-md-3 col-sm-6">
-                                <div class="footer-block">
-                                    <h3 class="footer-block-title">Our company</h3>
-                                    <ul>
-                                        <li><a href="#">Delivery</a></li>
-                                        <li><a href="#">Legal Notice</a></li>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                    </ul>
-                                </div>
                             </div>
                             <!-- Footer Block Area End Here -->
                             <!-- Begin Footer Block Area -->
                             <div class="col-lg-4">
                                 <div class="footer-block">
-                                    <h3 class="footer-block-title">Follow Us</h3>
+                                    <h3 class="footer-block-title">Ikuti Kami</h3>
                                     <ul class="social-link">
-                                        <li class="twitter">
-                                            <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="rss">
-                                            <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="RSS">
-                                                <i class="fa fa-rss"></i>
-                                            </a>
-                                        </li>
-                                        <li class="google-plus">
-                                            <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google Plus">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        </li>
-                                        <li class="facebook">
-                                            <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="youtube">
-                                            <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank" title="Youtube">
-                                                <i class="fa fa-youtube"></i>
-                                            </a>
-                                        </li>
                                         <li class="instagram">
-                                            <a href="https://www.instagram.com/" data-toggle="tooltip" target="_blank" title="Instagram">
+                                            <a href="https://instagram.com/abdzn_/" data-toggle="tooltip" target="_blank" title="Instagram">
                                                 <i class="fa fa-instagram"></i>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- Begin Footer Newsletter Area -->
-                                <div class="footer-newsletter">
-                                    <h4>Sign up to newsletter</h4>
-                                    <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
-                                        <div id="mc_embed_signup_scroll">
-                                            <div id="mc-form" class="mc-form subscribe-form form-group">
-                                                <input id="mc-email" type="email" autocomplete="off" placeholder="Enter your email" />
-                                                <button class="btn" id="mc-submit">Subscribe</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- Footer Newsletter Area End Here -->
                             </div>
                             <!-- Footer Block Area End Here -->
                         </div>
@@ -2986,32 +2894,7 @@
             <div class="footer-static-bottom pt-55 pb-55">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <!-- Begin Footer Links Area -->
-                            <div class="footer-links">
-                                <ul>
-                                    <li><a href="#">Online Shopping</a></li>
-                                    <li><a href="#">Promotions</a></li>
-                                    <li><a href="#">My Orders</a></li>
-                                    <li><a href="#">Help</a></li>
-                                    <li><a href="#">Customer Service</a></li>
-                                    <li><a href="#">Support</a></li>
-                                    <li><a href="#">Most Populars</a></li>
-                                    <li><a href="#">New Arrivals</a></li>
-                                    <li><a href="#">Special Products</a></li>
-                                    <li><a href="#">Manufacturers</a></li>
-                                    <li><a href="#">Our Stores</a></li>
-                                    <li><a href="#">Shipping</a></li>
-                                    <li><a href="#">Payments</a></li>
-                                    <li><a href="#">Warantee</a></li>
-                                    <li><a href="#">Refunds</a></li>
-                                    <li><a href="#">Checkout</a></li>
-                                    <li><a href="#">Discount</a></li>
-                                    <li><a href="#">Refunds</a></li>
-                                    <li><a href="#">Policy Shipping</a></li>
-                                </ul>
-                            </div>
-                            <!-- Footer Links Area End Here -->
+                        <div class="col-lg-12">>
                             <!-- Begin Footer Payment Area -->
                             <div class="copyright text-center">
                                 <a href="#">
@@ -3021,7 +2904,7 @@
                             <!-- Footer Payment Area End Here -->
                             <!-- Begin Copyright Area -->
                             <div class="copyright text-center pt-25">
-                                <span><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
+                                <span><a target="_blank" href="https://instagram.com/abdzn_/">Desaign by Kanadiyaa</a></span>
                             </div>
                             <!-- Copyright Area End Here -->
                         </div>
@@ -3045,31 +2928,8 @@
                                 <div class="product-details-left">
                                     <div class="product-details-images slider-navigation-1">
                                         <div class="lg-image">
-                                            <img src="images/product/large-size/1.jpg" alt="product image">
+                                            <img src="admin/produk_img/" alt="product image" id="modal-gambar">
                                         </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/2.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/3.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/4.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/5.jpg" alt="product image">
-                                        </div>
-                                        <div class="lg-image">
-                                            <img src="images/product/large-size/6.jpg" alt="product image">
-                                        </div>
-                                    </div>
-                                    <div class="product-details-thumbs slider-thumbs-1">
-                                        <div class="sm-image"><img src="images/product/small-size/1.jpg" alt="product image thumb"></div>
-                                        <div class="sm-image"><img src="images/product/small-size/2.jpg" alt="product image thumb"></div>
-                                        <div class="sm-image"><img src="images/product/small-size/3.jpg" alt="product image thumb"></div>
-                                        <div class="sm-image"><img src="images/product/small-size/4.jpg" alt="product image thumb"></div>
-                                        <div class="sm-image"><img src="images/product/small-size/5.jpg" alt="product image thumb"></div>
-                                        <div class="sm-image"><img src="images/product/small-size/6.jpg" alt="product image thumb"></div>
                                     </div>
                                 </div>
                                 <!--// Product Details Left -->
@@ -3078,59 +2938,43 @@
                             <div class="col-lg-7 col-md-6 col-sm-6">
                                 <div class="product-details-view-content pt-60">
                                     <div class="product-info">
-                                        <h2>Today is a good day Framed poster</h2>
-                                        <span class="product-details-ref">Reference: demo_15</span>
-                                        <div class="rating-box pt-20">
-                                            <ul class="rating rating-with-review-item">
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li><i class="fa fa-star-o"></i></li>
-                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                                <li class="review-item"><a href="#">Read Review</a></li>
-                                                <li class="review-item"><a href="#">Write Review</a></li>
-                                            </ul>
-                                        </div>
+                                        <h2 id="modal-nama-produk"></h2>
+                                        <span class="product-details-ref" id="modal-kategori">kategori</span>
                                         <div class="price-box pt-20">
-                                            <span class="new-price new-price-2">$57.98</span>
+                                            <span class="new-price new-price-2" id="modal-harga">Rp0</span>
                                         </div>
-                                        <div class="product-desc">
-                                            <p>
-                                                <span>100% cotton double printed dress. Black and white striped top and orange high waisted skater skirt bottom. Lorem ipsum dolor sit amet, consectetur adipisicing elit. quibusdam corporis, earum facilis et nostrum dolorum accusamus similique eveniet quia pariatur.
-                                                </span>
-                                            </p>
+                                        <div class="product-decs">
+                                            <p id="modal-desk"></p>
+                                            <p><strong>Stok tersedia:</strong> <span id="modal-stok">0</span> unit</p>
                                         </div>
-                                        <div class="product-variants">
-                                            <div class="produt-variants-size">
-                                                <label>Dimension</label>
-                                                <select class="nice-select">
-                                                    <option value="1" title="S" selected="selected">40x60cm</option>
-                                                    <option value="2" title="M">60x90cm</option>
-                                                    <option value="3" title="L">80x120cm</option>
-                                                </select>
-                                            </div>
-                                        </div>
+
                                         <div class="single-add-to-cart">
-                                            <form action="#" class="cart-quantity">
+                                            <form action="tambah_ke_keranjang.php" method="POST" class="cart-quantity">
+                                                <input type="hidden" name="id_produk" id="input-id-produk">
+                                                <input type="hidden" name="id_user" value="<?= $_SESSION['id_user'] ?>">
+                                                <input type="hidden" name="harga" id="input-harga">
+                                                <input type="hidden" name="redirect_url" value="belanja.php">
+
                                                 <div class="quantity">
-                                                    <label>Quantity</label>
+                                                    <label>Jumlah</label>
                                                     <div class="cart-plus-minus">
-                                                        <input class="cart-plus-minus-box" value="1" type="text">
+                                                        <input class="cart-plus-minus-box" name="jumlah" id="input-jumlah" value="1" type="text">
                                                         <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
                                                         <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                                     </div>
                                                 </div>
-                                                <button class="add-to-cart" type="submit">Add to cart</button>
+
+                                                <button class="add-to-cart" type="submit">Beli Sekarang</button>
                                             </form>
                                         </div>
+
                                         <div class="product-additional-info pt-25">
-                                            <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
                                             <div class="product-social-sharing pt-25">
                                                 <ul>
-                                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
-                                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
-                                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i>Google +</a></li>
-                                                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i> Google +</a></li>
+                                                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -3142,6 +2986,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Quick View | Modal Area End Here -->
     </div>
     <!-- Body Wrapper End Here -->
