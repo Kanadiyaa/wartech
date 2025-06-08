@@ -198,7 +198,7 @@ session_start();
                                                     <a href="cart.php" class="li-button li-button-fullwidth li-button-sm btn btn-warning">
                                                         <span>KERANJANG</span>
                                                     </a>
-                                                    <form action="checkout.php" method="POST" style="margin: 0;">
+                                                    <form action="cart.php" method="POST" style="margin: 0;">
                                                         <button type="submit" name="checkout" class="li-button li-button-fullwidth li-button-sm btn btn-warning" style="display: flex; align-items: center; justify-content: center;">
                                                             CHECKOUT
                                                         </button>

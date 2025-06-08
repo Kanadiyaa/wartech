@@ -123,7 +123,6 @@ if (isset($_POST['simpan'])) {
 
             <li>
               <a class="dropdown-item d-flex align-items-center" href="logout.php">
-                <i class="bi bi-box-arrow-in-right"></i>
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>

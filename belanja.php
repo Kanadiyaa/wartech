@@ -225,7 +225,7 @@ session_start();
                                                     <a href="cart.php" class="li-button li-button-fullwidth li-button-sm btn btn-warning">
                                                         <span>KERANJANG</span>
                                                     </a>
-                                                    <form action="checkout.php" method="POST" style="margin: 0;">
+                                                    <form action="cart.php" method="POST" style="margin: 0;">
                                                         <button type="submit" name="checkout" class="li-button li-button-fullwidth li-button-sm btn btn-warning" style="display: flex; align-items: center; justify-content: center;">
                                                             CHECKOUT
                                                         </button>
@@ -845,10 +845,7 @@ session_start();
                                         <div class="product-additional-info pt-25">
                                             <div class="product-social-sharing pt-25">
                                                 <ul>
-                                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i> Google +</a></li>
-                                                    <li class="instagram"><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
+                                                    <li class="instagram"><a href="https://instagram.com/abdzn_/" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
                                                 </ul>
                                             </div>
                                         </div>

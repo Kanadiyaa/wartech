@@ -196,7 +196,7 @@ session_start();
                                                     <a href="cart.php" class="li-button li-button-fullwidth li-button-sm btn btn-warning">
                                                         <span>KERANJANG</span>
                                                     </a>
-                                                    <form action="checkout.php" method="POST" style="margin: 0;">
+                                                    <form action="cart.php" method="POST" style="margin: 0;">
                                                         <button type="submit" name="checkout" class="li-button li-button-fullwidth li-button-sm btn btn-warning" style="display: flex; align-items: center; justify-content: center;">
                                                             CHECKOUT
                                                         </button>
@@ -307,7 +307,7 @@ session_start();
                                 <P>
                                     <span class><?= nl2br($data['desk']) ?></span>
                                 </P>
-                                <P><strong>Stol tersedia:</strong> <?= $data['stok'] ?> unit</P>
+                                <P><strong>Stok tersedia:</strong> <?= $data['stok'] ?> unit</P>
                             </div>
 
                             <div class="single-add-to-cart">
@@ -489,12 +489,9 @@ session_start();
                                 <?php
                                 include 'admin/koneksi.php';
                                 $id_produk = $_GET['id'];
-
                                 $query_produk_lain = mysqli_query($koneksi, "SELECT * FROM tb_produk WHERE id_produk != '$id_produk' ORDER BY RAND() LIMIT 6");
                                 while ($p = mysqli_fetch_array($query_produk_lain)) {
                                 ?>
-
-
                                     <div class="col-lg-12">
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">

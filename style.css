@@ -80,7 +80,7 @@ body {
 	overflow-x: hidden;
 }
 a {
-	color: #4FC1F0;
+	color: #012970;
 	transition: 0.3s ease-in-out;
 }
 a:hover {
@@ -241,7 +241,7 @@ span.tooltip-content {
 	max-width: 100%;
 }
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
-	background-color: #fed700;
+	background-color: #000000;
 }
 .nice-select .option:hover {
 	color: #ffffff;
@@ -1295,7 +1295,7 @@ textarea:focus {
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 #scrollUp:hover {
-	background: #fed700 none repeat scroll 0 0;
+	background: #4FC1F0 none repeat scroll 0 0;
 }
 #scrollUp i {
 	color: #ffffff;
@@ -4629,10 +4629,10 @@ span.required {
   transition: all 0.3s ease-in-out;
 }
  .contact-form .li-btn-3:hover {
-  background-color: #fed700;
+  background-color: #4FC1F0;
   color: #ffffff;
-  background-color: #fed700;
-  border-color: #fed700; 
+  background-color: #4FC1F0;
+  border-color: #4FC1F0; 
 }
 .contact-page-side-content {
   background-color: #F2F2F2;
@@ -5074,7 +5074,7 @@ span.required {
 	}
 }
 .product-social-sharing > ul > li:hover {
-	background: #fed700;
+	background: #4FC1F0;
 }
 .product-social-sharing > ul > li > a {
 	color: #ffffff;

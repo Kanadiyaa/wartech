@@ -194,7 +194,7 @@ session_start();
                                                     <a href="cart.php" class="li-button li-button-fullwidth li-button-sm btn btn-warning">
                                                         <span>KERANJANG</span>
                                                     </a>
-                                                    <form action="checkout.php" method="POST" style="margin: 0;">
+                                                    <form action="cart.php" method="POST" style="margin: 0;">
                                                         <button type="submit" name="checkout" class="li-button li-button-fullwidth li-button-sm btn btn-warning" style="display: flex; align-items: center; justify-content: center;">
                                                             CHECKOUT
                                                         </button>
@@ -269,11 +269,11 @@ session_start();
                                 <div class="single-slide align-center-left  animation-style-01 bg-1">
                                     <div class="slider-progress"></div>
                                     <div class="slider-content">
-                                        <h5>Sale Offer <span>-20% Off</span> This Week</h5>
-                                        <h2>Chamcham Galaxy S9 | S9+</h2>
-                                        <h3>Starting at <span>$1209.00</span></h3>
+                                        <h5>Dijual <span>-10% Off</span> Di Minggu Ini</h5>
+                                        <h2>Samsung Galaxy S9 | S9+</h2>
+                                        <h3>Mulai Dari <span>Rp 2.000.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
+                                            <a class="links" href="shop-left-sidebar.html">Beli Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -282,11 +282,11 @@ session_start();
                                 <div class="single-slide align-center-left animation-style-02 bg-2">
                                     <div class="slider-progress"></div>
                                     <div class="slider-content">
-                                        <h5>Sale Offer <span>Black Friday</span> This Week</h5>
+                                        <h5>Dijual <span>-5% Off</span> Di Minggu Ini</h5>
                                         <h2>Work Desk Surface Studio 2018</h2>
-                                        <h3>Starting at <span>$824.00</span></h3>
+                                        <h3>Mulai Dari <span>Rp 10.200.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
+                                            <a class="links" href="shop-left-sidebar.html">Beli Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -295,11 +295,11 @@ session_start();
                                 <div class="single-slide align-center-left animation-style-01 bg-3">
                                     <div class="slider-progress"></div>
                                     <div class="slider-content">
-                                        <h5>Sale Offer <span>-10% Off</span> This Week</h5>
+                                        <h5>Dijual <span>-10% Off</span> Di Minggu Ini</h5>
                                         <h2>Phantom 4 Pro+ Obsidian</h2>
-                                        <h3>Starting at <span>$1849.00</span></h3>
+                                        <h3>Mulai Dari <span>Rp 20.000.000</span></h3>
                                         <div class="default-btn slide-btn">
-                                            <a class="links" href="shop-left-sidebar.html">Shopping Now</a>
+                                            <a class="links" href="shop-left-sidebar.html">Beli Sekarang</a>
                                         </div>
                                     </div>
                                 </div>
@@ -434,12 +434,12 @@ session_start();
                         <!-- Li's Static Home Image Area End Here -->
                         <!-- Begin Li's Static Home Content Area -->
                         <div class="li-static-home-content">
-                            <p>Sale Offer<span>-20% Off</span>This Week</p>
-                            <h2>Featured Product</h2>
-                            <h2>Meito Accessories 2018</h2>
+                            <p>Dijual Sampai <span>-20% Off</span> Di Minggu Ini</p>
+                            <h2>Produk Terbaru</h2>
+                            <h2>Meito Aksesoris 2025</h2>
                             <p class="schedule">
-                                Starting at
-                                <span> $1209.00</span>
+                                Dijual dengan harga spesial hanya untuk anda, <span>Rp</span>
+                                <span>1.200.000</span>
                             </p>
                             <div class="default-btn">
                                 <a href="shop-left-sidebar.html" class="links">Shopping Now</a>
