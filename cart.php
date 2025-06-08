@@ -115,50 +115,94 @@ session_start();
                                         </li>
 
                                         <!-- Header Middle Wishlist Area End Here -->
+                                        <?php
+                                        if (session_status() === PHP_SESSION_NONE) {
+                                            session_start();
+                                        }
+
+                                        include "admin/koneksi.php";
+
+                                        $total_keranjang = 0;
+                                        $jumlah_item = 0;
+                                        $total_bayar = 0;
+
+                                        if (isset($_SESSION['username'])) {
+                                            $username = mysqli_real_escape_string($koneksi, $_SESSION['username']);
+
+                                            $query_user = mysqli_query($koneksi, "SELECT id_user FROM tb_user WHERE username = '$username'");
+                                            $data_user = mysqli_fetch_assoc($query_user);
+
+                                            if ($data_user) {
+                                                $id_user = $data_user['id_user'];
+
+                                                $pesanan = [];
+                                                $query_pesanan = mysqli_query($koneksi, "
+            SELECT p.id_pesanan, p.qty, pr.id_produk, pr.nm_produk, pr.gambar, pr.harga
+            FROM tb_pesanan p
+            JOIN tb_produk pr ON p.id_produk = pr.id_produk
+            WHERE p.id_user = '$id_user'
+        ");
+
+                                                while ($row = mysqli_fetch_assoc($query_pesanan)) {
+                                                    $pesanan[] = $row;
+                                                    $jumlah_item += $row['qty'];
+                                                    $total_keranjang += $row['qty'] * $row['harga'];
+                                                }
+
+                                                $diskon = 0;
+                                                if ($total_keranjang > 3000000) {
+                                                    $diskon = 0.07 * $total_keranjang;
+                                                } elseif ($total_keranjang > 1500000) {
+                                                    $diskon = 0.05 * $total_keranjang;
+                                                }
+                                                $total_bayar = $total_keranjang - $diskon;
+                                            }
+                                        }
+                                        ?>
+
                                         <!-- Begin Header Mini Cart Area -->
                                         <li class="hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
-                                                <span class="item-text">£80.00
-                                                    <span class="cart-item-count">2</span>
+                                                <span class="item-text">
+                                                    Rp<?= number_format($total_bayar, 0, ',', '.') ?>
+                                                    <span class="cart-item-count"><?= $jumlah_item ?></span>
                                                 </span>
                                             </div>
-                                            <span></span>
                                             <div class="minicart">
                                                 <ul class="minicart-product-list">
-                                                    <li>
-                                                        <a href="single-product.html" class="minicart-product-image">
-                                                            <img src="images/product/small-size/5.jpg" alt="cart products">
-                                                        </a>
-                                                        <div class="minicart-product-details">
-                                                            <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                            <span>£40 x 1</span>
-                                                        </div>
-                                                        <button class="close" title="Remove">
-                                                            <i class="fa fa-close"></i>
-                                                        </button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="single-product.html" class="minicart-product-image">
-                                                            <img src="images/product/small-size/6.jpg" alt="cart products">
-                                                        </a>
-                                                        <div class="minicart-product-details">
-                                                            <h6><a href="single-product.html">Aenean eu tristique</a></h6>
-                                                            <span>£40 x 1</span>
-                                                        </div>
-                                                        <button class="close" title="Remove">
-                                                            <i class="fa fa-close"></i>
-                                                        </button>
-                                                    </li>
+                                                    <?php if (!empty($pesanan)): ?>
+                                                        <?php foreach ($pesanan as $row): ?>
+                                                            <li>
+                                                                <a href='single-product.php?id=<?= $row['id_produk'] ?>' class='minicart-product-image'>
+                                                                    <img src='admin/produk_img/<?= htmlspecialchars($row['gambar']) ?>' alt='<?= htmlspecialchars($row['nm_produk']) ?>' width='70'>
+                                                                </a>
+                                                                <div class='minicart-product-details'>
+                                                                    <h6><a href='single-product.php?id=<?= $row['id_produk'] ?>'><?= htmlspecialchars($row['nm_produk']) ?></a></h6>
+                                                                    <span>Rp<?= number_format($row['harga'], 0, ',', '.') ?> x <?= $row['qty'] ?></span>
+                                                                </div>
+                                                                <a href='hapus_pesanan.php?id=<?= $row['id_pesanan'] ?>' onclick='return confirm("Hapus item ini?")' class='close'>
+                                                                    <i class='fa fa-close'></i>
+                                                                </a>
+                                                            </li>
+                                                        <?php endforeach; ?>
+                                                    <?php else: ?>
+                                                        <li>
+                                                            <div class='minicart-product-details'>Keranjang Anda kosong.</div>
+                                                        </li>
+                                                    <?php endif; ?>
                                                 </ul>
-                                                <p class="minicart-total">SUBTOTAL: <span>£80.00</span></p>
+
+                                                <p class="minicart-total">TOTAL: <span>Rp<?= number_format($total_bayar, 0, ',', '.') ?></span></p>
                                                 <div class="minicart-button">
-                                                    <a href="shopping-cart.html" class="li-button li-button-fullwidth li-button-dark">
-                                                        <span>View Full Cart</span>
+                                                    <a href="cart.php" class="li-button li-button-fullwidth li-button-sm btn btn-warning">
+                                                        <span>KERANJANG</span>
                                                     </a>
-                                                    <a href="checkout.html" class="li-button li-button-fullwidth">
-                                                        <span>Checkout</span>
-                                                    </a>
+                                                    <form action="checkout.php" method="POST" style="margin: 0;">
+                                                        <button type="submit" name="checkout" class="li-button li-button-fullwidth li-button-sm btn btn-warning" style="display: flex; align-items: center; justify-content: center;">
+                                                            CHECKOUT
+                                                        </button>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </li>
@@ -227,42 +271,42 @@ session_start();
                         include "admin/koneksi.php";
 
                         if (isset($_POST['update_cart'])) {
-    if (!isset($_SESSION['id_user'])) {
-        echo "<script>alert('User tidak ditemukan!'); window.location='cart.php';</script>";
-        exit;
-    }
+                            if (!isset($_SESSION['id_user'])) {
+                                echo "<script>alert('User tidak ditemukan!'); window.location='cart.php';</script>";
+                                exit;
+                            }
 
-    $id_user = $_SESSION['id_user'];
-    
-    // Pastikan data qty tersedia
-    if (isset($_POST['qty']) && is_array($_POST['qty'])) {
-        foreach ($_POST['qty'] as $id_pesanan => $qty) {
-            $qty = (int)$qty;
-            if ($qty < 1) $qty = 1;
+                            $id_user = $_SESSION['id_user'];
 
-            // Ambil harga produk terkait dari join tabel
-            $query = mysqli_query($koneksi, "
+                            // Pastikan data qty tersedia
+                            if (isset($_POST['qty']) && is_array($_POST['qty'])) {
+                                foreach ($_POST['qty'] as $id_pesanan => $qty) {
+                                    $qty = (int)$qty;
+                                    if ($qty < 1) $qty = 1;
+
+                                    // Ambil harga produk terkait dari join tabel
+                                    $query = mysqli_query($koneksi, "
                 SELECT pr.harga 
                 FROM tb_pesanan p 
                 JOIN tb_produk pr ON p.id_produk = pr.id_produk 
                 WHERE p.id_pesanan = '$id_pesanan' AND p.id_user = '$id_user'
             ");
-            $data = mysqli_fetch_assoc($query);
-            $harga = $data['harga'];
-            $total = $qty * $harga;
+                                    $data = mysqli_fetch_assoc($query);
+                                    $harga = $data['harga'];
+                                    $total = $qty * $harga;
 
-            // Update qty dan total
-            mysqli_query($koneksi, "
+                                    // Update qty dan total
+                                    mysqli_query($koneksi, "
                 UPDATE tb_pesanan 
                 SET qty = '$qty', total = '$total' 
                 WHERE id_pesanan = '$id_pesanan' AND id_user = '$id_user'
             ");
-        }
-    }
+                                }
+                            }
 
-    echo "<script>alert('Keranjang berhasil diperbarui.'); window.location='cart.php';</script>";
-    exit;
-}
+                            echo "<script>alert('Keranjang berhasil diperbarui.'); window.location='cart.php';</script>";
+                            exit;
+                        }
 
 
                         if (isset($_POST['checkout'])) {

@@ -80,11 +80,11 @@ body {
 	overflow-x: hidden;
 }
 a {
-	color: #a4a4a4;
+	color: #4FC1F0;
 	transition: 0.3s ease-in-out;
 }
 a:hover {
-	color: #fed700;
+	color: #4FC1F0;
 }
 .img {
 	max-width: 100%;
@@ -97,7 +97,7 @@ a:hover {
 }
 a:focus,
 a:hover {
-	color: #fed700;
+	color: #4FC1F0;
 	text-decoration: none;
 }
 a,
@@ -335,7 +335,7 @@ button.li-btn:hover {
 a.links, 
 a.links-2, 
 a.review-links {
-	background: #fed700 none repeat scroll 0 0;
+	background: #4FC1F0 none repeat scroll 0 0;
 	color: #242424;
 	display: inline-block;
 	font-family: Montserrat;
@@ -1162,7 +1162,7 @@ textarea:focus {
 	font-size: 14px;
 	color: #242424;
 	position: relative;
-	background: #fed700;
+	background: #4FC1F0;
 	cursor: pointer;
 	font-weight: 500;
 	text-transform: capitalize;
@@ -1446,7 +1446,7 @@ textarea:focus {
 	background: #fff;
 	border-radius: 5px;
 	border: 1px solid #e1e1e1;
-	min-width: 638px;
+	min-width: 595px;
 	height: 45px;
 	float: left;
 }
@@ -1522,7 +1522,7 @@ textarea:focus {
 }
 /*Header Middle Minicart*/
 .hm-minicart {
-		display: inline-block;
+		display: flex;
 		position: relative;
 }
 .hm-minicart-trigger {
@@ -1623,7 +1623,7 @@ textarea:focus {
 	align-self: flex-start;
 }
 .minicart .minicart-product-list li .minicart-product-image:hover {
-	border-color: #fed700;
+	border-color: #4FC1F0;
 }
 .minicart .minicart-product-list li .minicart-product-image span.quantity {
 	background: -webkit-gradient(linear, left top, left bottom, from(#626262), to(#2f2f2f));
@@ -1663,7 +1663,7 @@ textarea:focus {
 	color: #333333;
 }
 .minicart .minicart-product-list li .minicart-product-details h6 a:hover {
-	color: #fed700;
+	color: #4FC1F0;
 }
 .minicart > ul > li > a > img {
 	width: 100%;
@@ -1679,7 +1679,7 @@ textarea:focus {
 	z-index: 1;
 }
 .minicart .minicart-product-list li button.close:hover {
-	color: #fed700;
+	color: #4FC1F0;
 }
 .minicart .minicart-total {
 	border: none;
@@ -1712,8 +1712,8 @@ textarea:focus {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
-	background: #fed700;
-	color: #ffffff;
+	background: #4FC1F0;
+	color: #000000;
 	line-height: 50px;
 	margin-top: 10px;
 	height: 50px;
@@ -2066,8 +2066,8 @@ textarea:focus {
 	font-weight: 400;
 	font-size: 16px;
 	padding: 20px 0;
-	color: #fff;
-	background-image: url(images/static-top/1.jpg);
+	color: #000;
+	background-color: #4FC1F0;
 	background-size: cover;
 	margin-top: 20px;
 }
@@ -2363,8 +2363,8 @@ textarea:focus {
 	width: 120px;
 }
 .add-actions-link li:hover {
-	background: #fed700;
-	border-color: #fed700;
+	background: #4FC1F0;
+	border-color: #4FC1F0;
 }
 .add-actions-link li a {
 	color: #a4a4a4;
@@ -2882,7 +2882,7 @@ textarea:focus {
 	color: #fff;
 }
 .social-link > li:hover > a {
-	background: #fed700 ;
+	background: #4FC1F0 ;
 }
 /*Social Link Color Variations*/
 .twitter {
@@ -2930,7 +2930,7 @@ textarea:focus {
 .footer-newsletter .form-group .btn {
 	position: absolute;
 	right: 0;
-	background: #fed700;
+	background: #4FC1F0;
 	border: none;
 	color: #242424;
 	height: 45px;
