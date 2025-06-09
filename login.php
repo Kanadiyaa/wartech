@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login || Wartech - Toko Produk Elektronik</title>
+    <title>Login || wartech - Toko Produk Elektronik</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->

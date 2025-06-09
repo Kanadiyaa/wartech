@@ -9,7 +9,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Hubungi Kami || Wartech - Digital Products Store eCommerce Bootstrap 4 Template</title>
+    <title>Hubungi Kami || wartech - Toko Produk Elektronik</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->

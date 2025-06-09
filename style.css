@@ -1077,7 +1077,7 @@ textarea:focus {
   font-size: 18px;
   letter-spacing: -.025em;
   line-height: 24px;
-  color: #0363cd;
+  color: #000000;
   text-transform: capitalize;
   font-weight: 500;
   margin: 0 0 15px 0;
@@ -2269,7 +2269,7 @@ textarea:focus {
   position: relative;
 }
 .product_desc .product_desc_info .product_name {
-	color: #0363cd;
+	color: #000000;
 	display: block;
 	font-size: 14px;
 	font-weight: 500;
