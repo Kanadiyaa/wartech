@@ -23,8 +23,7 @@ if (!isset($_SESSION["status"]) || $_SESSION["status"] !== "admin") {
 include 'koneksi.php';
 
 if (isset($_GET['id'])) {
-    $id_produk = $_GET['id'];
-
+    $id_produk = mysqli_real_escape_string($koneksi, $_GET['id']); // Escape ID dari GET
     // Ambil data produk berdasarkan ID
     $query = mysqli_query($koneksi, "SELECT * FROM tb_produk WHERE id_produk = '$id_produk'");
     $data = mysqli_fetch_array($query);
@@ -32,12 +31,14 @@ if (isset($_GET['id'])) {
 
 // Jika tombol update ditekan
 if (isset($_POST['update'])) {
-    $nm_produk = $_POST['nm_produk'];
-    $harga = $_POST['harga'];
-    $stok = $_POST['stok'];
-    $desk = $_POST['desk'];
-    $id_kategori = $_POST['id_kategori'];
-    $gambar_lama = $_POST['gambar_lama'];
+    // Escape semua input POST sebelum digunakan dalam query
+    $nm_produk = mysqli_real_escape_string($koneksi, $_POST['nm_produk']);
+    $harga = mysqli_real_escape_string($koneksi, $_POST['harga']);
+    $stok = mysqli_real_escape_string($koneksi, $_POST['stok']);
+    $desk = mysqli_real_escape_string($koneksi, $_POST['desk']); // Ini adalah bagian yang paling penting
+    $id_kategori = mysqli_real_escape_string($koneksi, $_POST['id_kategori']);
+    $gambar_lama = mysqli_real_escape_string($koneksi, $_POST['gambar_lama']);
+    $id_produk = mysqli_real_escape_string($koneksi, $_GET['id']); // Pastikan id_produk juga di-escape
 
     // Cek apakah ada gambar baru yang diupload
     if ($_FILES['gambar']['name'] != "") {
@@ -58,6 +59,7 @@ if (isset($_POST['update'])) {
             // Simpan gambar baru dengan nama unik
             $imgnewfile = md5(time() . $imgfile) . "." . $extension;
             move_uploaded_file($tmp_file, $dir . $imgnewfile);
+            $imgnewfile = mysqli_real_escape_string($koneksi, $imgnewfile); // Escape nama file gambar baru
         }
     } else {
         $imgnewfile = $gambar_lama; // Jika tidak ada gambar baru, gunakan gambar lama
@@ -88,15 +90,12 @@ if (isset($_POST['update'])) {
     <meta content="" name="description">
     <meta content="" name="keywords">
 
-    <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -105,13 +104,11 @@ if (isset($_POST['update'])) {
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
@@ -120,8 +117,7 @@ if (isset($_POST['update'])) {
                 <span class="d-none d-lg-block">wartech</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
-        </div><!-- End Logo -->
-
+        </div>
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
 
@@ -129,9 +125,7 @@ if (isset($_POST['update'])) {
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="assets/img/gambarrr.jpg" alt="Profile" class="rounded-circle">
-                        <!-- profile-img.jpg diganti nama file gambar kalian -->
-                    </a><!-- End Profile Iamge Icon -->
-
+                    </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
                             <h6><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Guest'; ?></h6>
@@ -153,15 +147,11 @@ if (isset($_POST['update'])) {
                             </a>
                         </li>
 
-                    </ul><!-- End Profile Dropdown Items -->
-                </li><!-- End Profile Nav -->
-
+                    </ul>
+                </li>
             </ul>
-        </nav><!-- End Icons Navigation -->
-
-    </header><!-- End Header -->
-
-    <!-- ======= Sidebar ======= -->
+        </nav>
+    </header>
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
@@ -171,53 +161,45 @@ if (isset($_POST['update'])) {
                     <i class="bi bi-house-door-fill"></i>
                     <span>Beranda</span>
                 </a>
-            </li><!-- End Dashboard Nav -->
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="kategori.php">
                     <i class="bi bi-tags-fill"></i>
                     <span>Kategori Produk</span>
                 </a>
-            </li><!-- End Kategori Page Nav -->
-
+            </li>
             <li class="nav-item">
                 <a class="nav-link " href="produk.php">
                     <i class="bi bi-box-seam-fill"></i>
                     <span>Produk</span>
                 </a>
-            </li><!-- End Produk Page Nav -->
-
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="keranjang.php">
                     <i class="bi bi-basket-fill"></i>
                     <span>Keranjang</span>
                 </a>
-            </li><!-- End Keranjang Page Nav -->
-
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="transaksi.php">
                     <i class="bi bi-clipboard-check-fill"></i>
                     <span>Transaksi</span>
                 </a>
-            </li><!-- End Transaksi Page Nav -->
-
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="laporan.php">
                     <i class="bi bi-envelope-fill"></i>
                     <span>Laporan</span>
                 </a>
-            </li><!-- End Laporan Page Nav -->
-
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="pengguna.php">
                     <i class="bi bi-person-fill"></i>
                     <span>Pengguna</span>
                 </a>
-            </li><!-- End pengguna Page Nav -->
+            </li>
         </ul>
-
-    </aside><!-- End Sidebar-->
-
-
+    </aside>
     <main id="main" class="main">
 
         <div class="pagetitle">
@@ -229,7 +211,7 @@ if (isset($_POST['update'])) {
                     <li class="breadcrumb-item active">Edit</li>
                 </ol>
             </nav>
-        </div><!-- End Page Title -->
+        </div>
         <section class="section">
             <div class="row">
                 <div class="col-lg-6">
@@ -237,24 +219,23 @@ if (isset($_POST['update'])) {
                     <div class="card">
                         <div class="card-body">
 
-                            <!-- Vertical Form -->
                             <form class="row g-3 mt-2" method="post" enctype="multipart/form-data">
-                                <input type="hidden" name="gambar_lama" value="<?php echo $data['gambar']; ?>">
+                                <input type="hidden" name="gambar_lama" value="<?php echo htmlspecialchars($data['gambar']); ?>">
                                 <div class="col-12">
                                     <label for="nm_produk" class="form-label">Nama Produk</label>
-                                    <input type="text" class="form-control" id="nm_produk" name="nm_produk" placeholder="Masukkan Nama Produk" value="<?php echo $data['nm_produk']; ?>" required>
+                                    <input type="text" class="form-control" id="nm_produk" name="nm_produk" placeholder="Masukkan Nama Produk" value="<?php echo htmlspecialchars($data['nm_produk']); ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="harga" class="form-label">Harga</label>
-                                    <input type="number" class="form-control" id="harga" name="harga" placeholder="Masukkan Harga Produk" value="<?php echo $data['harga']; ?>" required>
+                                    <input type="number" class="form-control" id="harga" name="harga" placeholder="Masukkan Harga Produk" value="<?php echo htmlspecialchars($data['harga']); ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="stok" class="form-label">Stok</label>
-                                    <input type="number" class="form-control" id="stok" name="stok" placeholder="Masukkan Stok Produk" value="<?php echo $data['stok']; ?>" required>
+                                    <input type="number" class="form-control" id="stok" name="stok" placeholder="Masukkan Stok Produk" value="<?php echo htmlspecialchars($data['stok']); ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="desk" class="form-label">Deskripsi</label>
-                                    <textarea class="form-control" id="desk" name="desk" required><?php echo $data['desk']; ?></textarea>
+                                    <textarea class="form-control" id="desk" name="desk" required><?php echo htmlspecialchars($data['desk']); ?></textarea>
                                 </div>
                                 <div class="col-12">
                                     <label for="id_kategori" class="form-label">Kategori</label>
@@ -264,7 +245,7 @@ if (isset($_POST['update'])) {
                                         $query_kategori = mysqli_query($koneksi, "SELECT * FROM tb_kategori");
                                         while ($kategori = mysqli_fetch_array($query_kategori)) {
                                             $selected = ($kategori['id_kategori'] == $data['id_kategori']) ? 'selected' : '';
-                                            echo "<option value='{$kategori['id_kategori']}' $selected>{$kategori['nm_kategori']}</option>";
+                                            echo "<option value='" . htmlspecialchars($kategori['id_kategori']) . "' $selected>" . htmlspecialchars($kategori['nm_kategori']) . "</option>";
                                         }
                                         ?>
                                     </select>
@@ -274,7 +255,7 @@ if (isset($_POST['update'])) {
                                     <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*">
                                     <br>
                                     <?php if ($data['gambar']) { ?>
-                                        <img src="produk_img/<?php echo $data['gambar']; ?>" alt="Gambar Produk" width="150">
+                                        <img src="produk_img/<?php echo htmlspecialchars($data['gambar']); ?>" alt="Gambar Produk" width="150">
                                     <?php } ?>
                                 </div>
                                 <div class="text-center">
@@ -291,9 +272,7 @@ if (isset($_POST['update'])) {
             </div>
         </section>
 
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
+    </main>
     <footer id="footer" class="footer">
         <div class="copyright">
             &copy; Copyright <strong><span>wartech</span></strong>. All Rights Reserved
@@ -301,11 +280,8 @@ if (isset($_POST['update'])) {
         <div class="credits">
             Designed by <a href="https://instagram.com/abdzn_/" target="_blank">kanadiyaa</a>
         </div>
-    </footer><!-- End Footer -->
+    </footer><a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Vendor JS Files -->
     <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/chart.js/chart.umd.js"></script>
@@ -315,7 +291,6 @@ if (isset($_POST['update'])) {
     <script src="assets/vendor/tinymce/tinymce.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
 </body>
