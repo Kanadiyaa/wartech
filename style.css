@@ -241,7 +241,7 @@ span.tooltip-content {
 	max-width: 100%;
 }
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
-	background-color: #000000;
+	background-color: #fed700;
 }
 .nice-select .option:hover {
 	color: #ffffff;
@@ -315,7 +315,7 @@ textarea {
 /*----------------------------------------*/
 button.li-btn {
 	border: none;
-	background: #4FC1F0;
+	background: #fed700;
 	color: #242424;
 	font-size: 20px;
 	width: 45px;
@@ -1067,7 +1067,7 @@ textarea:focus {
 .product-details-images .lg-image img, 
 .product-details-thumbs .sm-image img {
   width: 100%;
-}
+}	
 
 .product-details-thumbs .sm-image {
   cursor: pointer;
@@ -1502,13 +1502,14 @@ textarea:focus {
 /*Header Middle Wishlist*/
 .hm-wishlist {
 	float: left;
-	margin-right: 25px;
+	margin-right: 33px;
 	position: relative;
 }
 .hm-wishlist > a {
 	border: 1px solid #e1e1e1;
 	font-size: 20px;
-	color: #242424;
+	color: #000000;
+	background-color: #fed700;
 	width: 45px;
 	text-align: center;
 	height: 45px;
@@ -1517,8 +1518,8 @@ textarea:focus {
 	transition: all 0.3s ease-in-out;
 }
 .hm-wishlist > a:hover {
-	border-color: #fed700;
-	color: #fed700;
+	background: #333333;
+	color: #ffffff;
 }
 /*Header Middle Minicart*/
 .hm-minicart {
