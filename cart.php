@@ -67,7 +67,7 @@ session_start();
                         <!-- Begin Header Logo Area -->
                         <div class="col-lg-3">
                             <div class="logo pb-sm-30 pb-xs-30">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <h1>Wartech</h1>
                                 </a>
                             </div>
@@ -160,52 +160,6 @@ session_start();
                                         }
                                         ?>
 
-                                        <!-- Begin Header Mini Cart Area -->
-                                        <li class="hm-minicart">
-                                            <div class="hm-minicart-trigger">
-                                                <span class="item-icon"></span>
-                                                <span class="item-text">
-                                                    Rp<?= number_format($total_bayar, 0, ',', '.') ?>
-                                                    <span class="cart-item-count"><?= $jumlah_item ?></span>
-                                                </span>
-                                            </div>
-                                            <div class="minicart">
-                                                <ul class="minicart-product-list">
-                                                    <?php if (!empty($pesanan)): ?>
-                                                        <?php foreach ($pesanan as $row): ?>
-                                                            <li>
-                                                                <a href='single-product.php?id=<?= $row['id_produk'] ?>' class='minicart-product-image'>
-                                                                    <img src='admin/produk_img/<?= htmlspecialchars($row['gambar']) ?>' alt='<?= htmlspecialchars($row['nm_produk']) ?>' width='70'>
-                                                                </a>
-                                                                <div class='minicart-product-details'>
-                                                                    <h6><a href='single-product.php?id=<?= $row['id_produk'] ?>'><?= htmlspecialchars($row['nm_produk']) ?></a></h6>
-                                                                    <span>Rp<?= number_format($row['harga'], 0, ',', '.') ?> x <?= $row['qty'] ?></span>
-                                                                </div>
-                                                                <a href='hapus_pesanan.php?id=<?= $row['id_pesanan'] ?>' onclick='return confirm("Hapus item ini?")' class='close'>
-                                                                    <i class='fa fa-close'></i>
-                                                                </a>
-                                                            </li>
-                                                        <?php endforeach; ?>
-                                                    <?php else: ?>
-                                                        <li>
-                                                            <div class='minicart-product-details'>Keranjang Anda kosong.</div>
-                                                        </li>
-                                                    <?php endif; ?>
-                                                </ul>
-
-                                                <p class="minicart-total">TOTAL: <span>Rp<?= number_format($total_bayar, 0, ',', '.') ?></span></p>
-                                                <div class="minicart-button">
-                                                    <a href="cart.php" class="li-button li-button-fullwidth li-button-sm btn btn-warning">
-                                                        <span>KERANJANG</span>
-                                                    </a>
-                                                    <form action="cart.php" method="POST" style="margin: 0;">
-                                                        <button type="submit" name="checkout" class="li-button li-button-fullwidth li-button-sm btn btn-warning" style="display: flex; align-items: center; justify-content: center;">
-                                                            CHECKOUT
-                                                        </button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </li>
                                     <?php } ?>
                                 </ul>
                             </div>
@@ -370,7 +324,7 @@ session_start();
                                 exit;
                             }
 
-                            echo "<script>alert('Pesanan berhasil dibuat'); window.location= 'index.php';</script>";
+                            echo "<script>alert('Pesanan berhasil dibuat'); window.location= 'cart.php';</script>";
                         }
                         ?>
                         <form method="post" action="">
